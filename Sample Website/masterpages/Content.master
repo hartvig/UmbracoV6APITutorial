@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/umbMaster.master" AutoEventWireup="true" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">
+<div id="subNavigation">
+      <umbraco:Macro ID="Macro1" Alias="umb2ndLevelNavigation" runat="server"></umbraco:Macro>
+</div>
+<div id="content" class="textpage">
+  
+      <div id="contentHeader">  
+          <h2><umbraco:Item ID="Item1" runat="server" field="pageName"/></h2>
+      </div>
+      
+
+<asp:ContentPlaceHolder Id="content" runat="server">
+	<umbraco:Item ID="Item2" runat="server" field="bodyText" />
+</asp:ContentPlaceHolder>
+
+</div>
+
+</asp:Content>

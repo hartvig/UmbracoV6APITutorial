@@ -1,0 +1,11 @@
+<%@ Master Language="C#" MasterPageFile="~/masterpages/umbMaster.master" AutoEventWireup="true" %>
+<asp:content contentplaceholderid="cp_content" runat="server">
+  <div id="content" class="textpage">
+    <div id="sidebar" class="umbModuleContainer">
+    <span class="blog"></span>
+    <h3>Add some modules here</h3>
+    </div>
+    <div class="bodyText"><umbraco:item runat="server" field="bodyText"></umbraco:item></div>
+  </div>
+
+</asp:content>

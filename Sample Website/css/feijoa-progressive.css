@@ -1,0 +1,387 @@
+/* Progressive stylesheet, What should we do if we have a bunch more screen real-estate to play with? run away and hide? */
+
+
+/* css properties are grouped in the following order: font/type, display/margin/padding, position, width/height, border, backgrounds etc.
+new lines for these different property groups */
+
+
+body
+{
+       background: url(feijoa/bodybg.png) repeat-x 0 72px;
+       background: -moz-linear-gradient(top, rgb(255,255,255) 72px, rgb(235,235,235) 72px, rgb(255,255,255) 86px) repeat scroll 0 0 transparent; 
+}
+
+
+#siteName
+{
+       font-size: 2.3em;
+       width:auto;
+       line-height:inherit;
+       white-space:nowrap;
+        
+}
+
+.top, #body, .footer
+{
+       padding: 0 20px;
+}
+
+#top
+{
+        height: 109px;
+        overflow:hidden;
+}
+.top{height:120px}
+
+#top:before
+{
+        content:"";
+        clear:both;
+        position:absolute;
+        display:block;
+        top:69px;
+        height:0px;
+        width:100%;
+        border-width:40px !important;
+}
+
+
+#top, #body
+{
+        padding:0;
+}
+
+#body{
+      padding-bottom:90px;
+}
+#comments, #tagcloud, #sidebar
+{
+       float:right;
+       position:relative;
+       width:25.5%;
+       border-left:1px dotted #ccc;
+}
+
+#siteDescription
+{
+        margin: 27px 15px 0 15px;
+        padding: 0 0 0 13px;
+        border:0;
+        border-left: 1px solid rgba(255,255,255,0.2);  
+        border-bottom:0 !important;
+        width:auto;
+}
+
+#topNavigation
+{
+        clear:left;
+        top:1.2em;
+}
+
+#topNavigation li
+{
+        margin: 1px 3px;
+        padding-bottom: 31px;
+        
+}
+
+#topNavigation li a
+{
+        padding: 3px 11px 3px;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.2s;
+        -moz-transition-property: all;
+        -moz-transition-duration: 0.15s;
+        
+        
+}
+
+#topNavigation li a:hover, #topNavigation li.current a
+{
+        padding:8px 11px 10px
+}
+
+
+#topNavigation li.current
+{
+        background: none;
+}
+
+#topNavigation li.current span.marker
+        {
+            width:16px;
+            height:7px;
+            display:block;
+            -moz-border-radius:9px 9px 0px 0px;
+            -o-border-radius:9px 9px 0px 0px;
+            -webkit-border-radius:9px 9px 0px 0px;
+            border-radius:9px 9px 0px 0px;
+            margin:16px auto 0 auto;
+            text-align:center;
+            
+        }
+
+
+#subNavigation
+{
+        text-align: right;
+        margin-top: 28px;
+        padding-bottom:0px;
+        line-height:normal;
+  
+}
+
+
+#subNavigation li
+{
+        margin:0;
+        border:0;
+}
+
+#subNavigation li a
+{
+        margin: 0 8px;  
+}
+
+
+.post, .bodyText
+{
+        width:64%;
+        float:left;
+       
+}
+
+.bodyText .post{
+      width:100%;
+}
+
+#content.textpage:after, #content.frontPage:after{
+      content:".";
+      clear:both;
+      display:block;
+      visibility:hidden;
+}
+span.blog
+{
+        display:block;
+        left:-15px;
+        position:absolute;
+        top:12px; left:-15px;
+        width:24px;
+        height:24px;
+        background: url("/css/feijoa/tinyarrow.png") no-repeat scroll 8px 6px #FFFFFF;
+        border-radius:24px;
+        -moz-border-radius:24px;
+        -webkit-border-radius:24px;
+        box-shadow:1px 1px 3px #CCCCCC;
+        -moz-box-shadow:1px 1px 3px #CCCCCC;
+        -webkit-box-shadow:1px 1px 3px #CCCCCC;
+}
+
+
+.entry-date
+{
+        margin:-40px 0px 0 0;
+        overflow:visible;
+        position:static;
+        text-align:left;
+        font-size:1em;
+        width:auto;
+        height:auto;       
+}
+
+.entry-date abbr
+{
+        position:static;
+        z-index:auto;
+}
+
+#content.textpage .entry-date abbr{
+        
+}
+.entry-date{
+ position:relative; 
+}
+.entry-date .day{
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-transform: rotate(7deg);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(7deg);
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 6px solid rgba(55, 55, 55, 0.5);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0 6px 4px 6px;
+    position: absolute;
+    right: -2px;
+    top: -16px;
+}
+.entry-date .month{
+ -moz-transform: rotate(-90deg);
+ -webkit-transform: rotate(-90deg);
+  font-size: 11px;
+  position: absolute;
+  right: -45px;
+  top: 12px;
+}
+.entry-date .year{
+  visibility:hidden;
+}
+
+.ie9 .entry-date .month{
+  right:40px; top:0;
+}
+#body .post h2
+{
+        padding-right:0;
+        letter-spacing:-0.5px;
+}
+
+
+.post img
+{
+        margin:1px 0 10px 6px;
+}
+
+.column{
+                width:49%;
+                margin-right:0.5%;
+                float:left;
+        }
+
+.entry-content h3{
+                clear:both; padding-top:26px;
+        }
+
+
+.image-text{
+                font-family:'Museo300',arial,serif;
+                font-size:1.3em;
+                width:200px;
+                margin:20px 20px 0 0;
+        }
+
+h3.headline, .summaryList h4, .feedList h4 {
+    font-size: 1.1em;
+}
+
+}
+.bodyText p, .frontPage p{
+    font-size:0.9em;
+}
+
+
+/* business */
+.summaryList, .feedList{
+width:46%; 
+}
+#body .summaryList p, #body .feedlist p{
+margin-top:0;
+  font-size:0.8em;
+}
+.feedList{
+width:46%; 
+
+}
+#newsSummary{
+ float:right; 
+  margin-top:14px;
+}
+
+.feedList, #blogSummary{
+border-right:1px solid #ccc;
+padding-right:40px;
+}
+#content.frontPage p + p + p + h3{
+display:none;
+}
+#newsSummary + h3{
+width:100%;
+}
+#blogSummary + h3{
+width:100%;
+}
+@media (min-width: 1300px)
+{
+        .top, #body, .footer
+        {
+                width: 1180px;
+        }
+
+        .image-text{
+                font-family:'Museo300',arial,serif;
+                font-size:1.7em;
+                width:320px;
+                margin:30px 40px 0 0;
+        }
+
+        .column{
+                width:49%;
+                margin-right:0.5%;
+                float:left;
+        }
+        .entry-content h3{
+                clear:both; padding-top:26px;
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

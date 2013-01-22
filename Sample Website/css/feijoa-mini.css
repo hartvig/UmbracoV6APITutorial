@@ -1,0 +1,617 @@
+/* for mini devices, opera, iphone, Android, not sure about blackberry  */
+
+#siteName
+{
+    font-family: 'Museo700' , arial, serif;
+}
+
+#siteDescription
+{
+    font-size:0.9em; white-space:nowrap;
+}
+
+#comments h3, #tagcloud h3, #main h2
+{
+    font-family: 'Museo300' , Helvetica, arial, serif;
+}
+
+#topNavigation
+{
+    font: bold 1em/1.2 "Museo700" , "Helvetica Neue" , Helvetica, arial, serif;
+}
+
+#twitter
+{
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    width: 109px;
+    height: 47px;
+    background: url("feijoa/footer-gfx.png") no-repeat scroll right 2px transparent;
+}
+
+#feijoa
+{
+    position: absolute;
+    top: 13px;
+    right: 6px;
+    width: 109px;
+    height: 41px;
+    background: url("feijoa/footer-gfx.png") no-repeat scroll right -129px transparent;
+    padding-right: 50px;
+}
+
+
+#rss
+{
+    position: absolute;
+    top: 18px;
+    left: 55px;
+    width: 109px;
+    height: 41px;
+    background: url("feijoa/footer-gfx.png") no-repeat scroll right -200px transparent;
+}
+
+#footer
+{
+    height: 69px;
+}
+
+.footer
+{
+    height: 64px;
+}
+.helper-links
+{
+    display: none;
+}
+
+.feedList, #blogSummary
+{
+    border-right: 0 !important;
+}
+
+.entry-date
+{
+    overflow: hidden;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 0;
+    text-align: right;
+    font-size: 10px;
+    display: block;
+    width: 120px;
+    height: 88px;
+}
+
+.entry-date abbr
+{
+    position: relative;
+    z-index: 100;
+    display: block;
+}
+
+.entry-date .day
+{
+    -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    -moz-transform: rotate(7deg);
+    -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(7deg);
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-top: 6px solid rgba(55, 55, 55, 0.5);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0px 6px 6px 6px;
+    line-height: normal;
+    position: absolute;
+    right: 6px;
+    top: 3px;
+}
+.entry-date .month
+{
+    font-size: 11px;
+    position: absolute;
+    right: 0px;
+    top: 43px;
+}
+.entry-date .year
+{
+    visibility: hidden;
+}
+
+
+@media (max-width: 600px)
+{
+    body
+    {
+        background: url(feijoa/bodybg.png) repeat-x 0 104px;
+    }
+
+    #body h2
+    {
+        line-height: 1.2em;
+        padding-bottom: 8px;
+    }
+
+    #siteName, #siteDescription
+    {
+        width: auto;
+    }
+
+    #siteDescription
+    {
+        padding: 0 0 0 13px;
+        border: 0;
+        border-left: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .post
+    {
+        position: relative !important;
+    }
+
+    #archive h3, #archieve h3
+    {
+        margin: 0;
+        width: auto;
+    }
+
+    #archive .tab, #archieve .tab
+    {
+        width: auto;
+    }
+    .tag-links
+    {
+        margin-left: -58px;
+    }
+    #comments, #content, .post, #body .post, #tagcloud
+    {
+        width: auto;
+        position: static;
+        float: none;
+    }
+    #comments
+    {
+        border: 0;
+        padding: 0 9px 9px 0px;
+    }
+
+    #comments h3
+    {
+        padding: 12px 0 5px 11px;
+    }
+
+    .form-label
+    {
+        white-space: nowrap;
+    }
+    #tagcloud, #sidebar
+    {
+        display: none;
+    }
+
+    .entry-content img
+    {
+        width: 70%;
+        display: block;
+        height: auto;
+        -webkit-transform: rotate(0deg);
+        margin: 0 0 19px 0;
+    }
+    ol li
+    {
+        margin: 0 0 22px 20px;
+    }
+
+    ol.commentlist li
+    {
+        margin-left: 0;
+        padding: 8px 16px 0 16px;
+        list-style-type: none;
+    }
+    #comments
+    {
+        position: relative;
+        width: auto;
+        float: none;
+    }
+
+    #comments, #tagcloud
+    {
+        border-left: 0 !important;
+    }
+    #respond .form-submit input, fieldset input[type=submit]
+    {
+        width: 97%;
+        margin-top: 15px;
+    }
+    #commentform
+    {
+        padding: 0 10px;
+    }
+    .formcontainer
+    {
+        padding: 0 16px 9px 16px;
+    }
+    span.blog
+    {
+        display: none;
+    }
+
+    #siteName
+    {
+        line-height: 1.1;
+        margin: 5px 0 5px 0;
+        white-space: nowrap;
+    }
+    #siteDescription
+    {
+        margin: 20px 0px 0 15px;
+    }
+    .header, #main, .footer
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+    #body, .footer
+    {
+        padding: 0 0.5em;
+    }
+
+    #top, #body
+    {
+        height: auto;
+        width: auto;
+    }
+    #top
+    {
+        padding: 0;
+        height: 104px;
+    }
+
+    #top:before
+    {
+        content: "";
+        clear: both;
+        position: absolute;
+        display: block;
+        border-width: 29px !important;
+        top: 75px;
+        height: 0px;
+        width: 100%;
+    }
+
+    #body
+    {
+        padding: 0.2em 1em 130px 1em;
+    }
+    .top
+    {
+        padding: 0.2em 0.75em;
+        background-position: left top;
+    }
+    #topNavigation
+    {
+        font-size: 0.9em;
+        clear: both;
+        float: none;
+        position: static;
+        margin: 0 0 0 -0.1em;
+    }
+    #topNavigation li
+    {
+        padding-bottom: 17px;
+        white-space: nowrap;
+    }
+    #topNavigation li.current
+    {
+        background: none;
+    }
+
+    #topNavigation li.current:after
+    {
+        content: "";
+        width: 14px;
+        height: 7px;
+        display: block;
+        border-radius: 9px 9px 0px 0;
+        -moz-border-radius: 9px 9px 0px 0;
+        -o-border-radius: 9px 9px 0px 0;
+        -webkit-border-radius: 9px 9px 0px 0;
+        position: relative;
+        margin: 12px auto 0 auto;
+        text-align: center;
+    }
+    
+
+    #topNavigation li a
+    {
+        padding: 6px 8px 8px;
+    }
+
+    #subNavigation
+    {
+        float: left;
+        font-size: 0.8em;
+        height: auto;
+        margin-top: 14px;
+        margin-left: 3px;
+    }
+
+    #subNavigation li
+    {
+        margin-bottom: 13px;
+    }
+    #subNavigation li a, #subNavigation li:first-child a
+    {
+        margin: 0 5px 0 0px;
+        padding: 0 9px 0 0;
+        border-left: 0 !important;
+        border-right: solid 1px #ccc;
+    }
+    .dark #subNavigation li a, .dark #subNavigation li:first-child a
+    {
+        border-color: rgba(255,255,255,0.3);
+    }
+    #body h2
+    {
+        clear: both;
+    }
+    #subNavigation li:last-child a
+    {
+        border: 0;
+    }
+
+    #main
+    {
+        width: 100%;
+    }
+
+    #body
+    {
+        padding-top: 0px;
+    }
+
+    .entry-date .day
+    {
+        font-size: 12px;
+    }
+
+    .entry-date .month
+    {
+        top: 3px;
+        right: 42px;
+    }
+
+    #related ul li a
+    {
+        height: 54px;
+    }
+    #twitter
+    {
+        margin: 0 0 0 -5px;
+    }
+    #feijoa
+    {
+        right: 19px;
+    }
+    #rss
+    {
+        left: 51px !important;
+    }
+
+    .image-text
+    {
+        display: block !important;
+        font-family: 'Museo300' ,arial,serif;
+        font-size: 1.7em;
+        width: auto;
+        margin: 0 0 19px;
+    }
+
+}
+
+
+@media (max-width: 400px)
+{
+    body
+    {
+        background: url(feijoa/bodybg.png) repeat-x 0 162px !important;
+    }
+    #comments, #content, .post
+    {
+        width: auto;
+        position: static;
+        float: none;
+    }
+
+    #comments
+    {
+        position: relative;
+        width: auto;
+        float: none;
+    }
+
+
+    #siteName
+    {
+        font-size: 2.5em;
+        line-height: 1;
+        margin: 5px 0 1px 0;
+        width: 100%;
+    }
+    .top, #body, .footer
+    {
+        width: auto;
+        padding: 0;
+    }
+    #top, #body
+    {
+        height: auto;
+        width: auto;
+    }
+    #top
+    {
+        padding: 0;
+    }
+
+    #top:before
+    {
+        content: "";
+        clear: both;
+        position: absolute;
+        display: block;
+        border-width: 93px !important;
+        top: 72px;
+        height: 0px;
+        width: 100%;
+    }
+
+    #body
+    {
+        padding: 0.2em 1em 80px 1em;
+    }
+    .top
+    {
+        padding: 0.2em 0.75em 0;
+        background-position: left top !important;
+    }
+
+    .top:after
+    {
+        content: ".";
+        clear: both;
+        display: block;
+        visibility: hidden;
+        height: 0;
+    }
+
+    .entry-content img
+    {
+        width: 90%;
+    }
+    .footer
+    {
+        padding: 0.2em 0.75em;
+    }
+
+    span.blog
+    {
+        left: 3%;
+        display: none;
+    }
+    #siteDescription
+    {
+        display: block;
+        margin: -7px 0 0.65em 0;
+        padding: 0 0 0.3em 0.2em;
+        width: 100%;
+        border-left: 0 !important;
+        border-bottom: 0 none !important;
+    }
+    .dark #siteDescription
+    {
+        border-bottom: 1px solid rgba(90,90,90,0.05);
+    }
+
+
+    #topNavigation
+    {
+        font-size: 1em;
+        float: left;
+        position: static;
+        margin: 0 0 0.35em -0.23em;
+    }
+    #topNavigation li
+    {
+        padding-bottom: 7px;
+        margin-bottom: 0.2em;
+        white-space: nowrap;
+    }
+    #topNavigation li a
+    {
+        padding: 7px 8px 6px;
+    }
+    #topNavigation li.current
+    {
+        background: none;
+    }
+
+    #topNavigation li.current:after
+    {
+        content: "";
+        width: 7px;
+        height: 14px;
+        display: block;
+        border-radius: 8px;
+        -moz-border-radius: 8px;
+        -o-border-radius: 8px;
+        -webkit-border-radius: 0px 8px 8px 0;
+        margin: -19px 0 0 0px;
+        background: #fff;
+    }
+    #topNavigation li.current a
+    {
+        padding: 7px 8px 6px 11px;
+    }
+    #subNavigation
+    {
+        text-align: left;
+        display: block;
+        height: auto;
+        margin-top: 9px;
+        padding-bottom: 33px;
+    }
+
+    #subNavigation li
+    {
+        border: 0;
+    }
+    #subNavigation li a
+    {
+        margin: 0 6px 0 0;
+    }
+    #main
+    {
+        width: 100%;
+    }
+
+
+
+    #body .post h2
+    {
+        padding-right: 30%;
+    }
+
+    .entry-date .day
+    {
+        font-size: 20px;
+    }
+
+    .entry-date .month
+    {
+        top: 43px;
+        right: 0px;
+    }
+
+    #feijoa
+    {
+        right: 4px;
+    }
+
+    .summaryList h4, .feedList h4
+    {
+        width: 59%;
+    }
+
+}
+
+#body
+{
+    overflow: hidden;
+}
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

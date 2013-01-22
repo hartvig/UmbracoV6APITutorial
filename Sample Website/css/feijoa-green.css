@@ -1,0 +1,542 @@
+/* Color overrides and settings relating to themes
+ - this file gets apended to when someone runs the skin config front-end so watch out that it doesn't grow too ridculously big :) 
+*/
+body
+{
+    border-top:none;
+    color:#555;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6
+{
+    color:#222;
+}
+html, #body
+{
+    background:#fff !important;
+}
+#content a, #content a:active, #content a:visited, #subNavigation a, #subNavigation a:active, #subNavigation a:visited
+{
+    color: #3688AF;
+}
+
+/* Colours defaults start here (Black, White and Blue) */
+
+
+/* Navigation */
+#topNavigation li a
+{
+    color: #fff;
+    color: rgba(255,255,255,0.9);
+    backround-color: #333;
+    background-color: rgba(255,255,255,0.03);
+    text-shadow: 0px 1px 1px rgb(40,40,40);
+    -o-text-shadow: 0px 1px 1px rgba(0,0,0,0.8);
+    border: solid 1px rgba(255,255,255,0.05);
+}
+
+#topNavigation li a:hover, #topNavigation li.current a
+{
+    background-color: #333;
+    background-color: rgba(255,255,255,0.2);
+    background: -moz-linear-gradient(center bottom,rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.25) 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear,left top, left bottom,color-stop(0, rgba(255,255,255,0.25)),color-stop(1, rgba(255,255,255,0.05)));
+    border: solid 1px rgba(255,255,255,0);
+}
+
+#topNavigation li.current span.marker
+{
+    background: #fff;
+}
+
+#subNavigation li a
+{
+    border-left: solid 1px #ccc;
+}
+
+#top
+{
+    /* Some joker wanted ie support */
+    color: #fff;
+    filter: progid:DXImageTransform.Microsoft.gradient( endColorstr=#000000 startColorstr=#555555);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient( endColorstr=#000000 startColorstr=#555555)";
+    background-color: #333;
+    background-color: -moz-linear-gradient(center bottom , #000 0%, #555 100%);
+    background-color: -webkit-gradient(linear, left top, left bottom, color-stop(1, #000), color-stop(0, #555));
+    background-repeat: repeat-x;
+    border-top: solid 1px rgb(62,62,62);
+}
+
+#top a
+{
+    color: #fff;
+    color: rgba(255,255,255,0.9);
+}
+
+.top
+{
+    background-image: url(/css/feijoa/scratch2.png);
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+/* Site Name & Description */
+#siteName
+{
+    text-shadow: 1px 1px 1px rgba(40,40,40, 0.7);
+}
+
+#siteName a
+{
+    color: #fff;
+}
+
+#siteDescription
+{
+    color: rgb(140,210,236);
+    -moz-text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    -webkit-text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-bottom: none;
+}
+
+#body h2
+{
+    border-bottom: 1px dotted rgba(54, 54, 54, 0.3);
+}
+
+/* Meta Data Styles */
+#content .entry-meta a, #content .meta, #content a.tagweight0, #content a.tagweight1, #content a.tagweight2, #content a.tagweight3, #content a.tagweight4, #content a.tagweight5
+{
+    color: #fff;
+    background: rgba(54,136,175, 0.6);
+}
+
+#content .comments-link a
+{
+    color: #fff;
+    background: #333;
+}
+
+a.tagweight0
+{
+    background: rgba(54,136,175, 0.1);
+}
+
+a.tagweight1
+{
+    background: rgba(54,136,175, 0.6);
+}
+
+a.tagweight2, a.tagweight3, a.tagweight4
+{
+    background: rgba(54,136,175, 0.9);
+}
+
+.entry-date
+{
+    color: #aaa;
+}
+
+.author .fn
+{
+    color: #333;
+}
+
+small
+{
+    color: #999999;
+}
+
+.error
+{
+    color: #fff;
+    background: #ff0000;
+}
+
+.meta-sep
+{
+    color: transparent;
+    border-right: 1px solid #ccc;
+}
+
+/* Comment Styles */
+#gravatar, .commentlist .photo
+{
+    box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+    -moz-box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+    -webkit-box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+}
+
+li.comment
+{
+    border-bottom: dotted 1px #ccc;
+}
+
+ol.commentlist li
+{
+    background: rgba(255,255,255,0.7);
+}
+
+.commentlist .photo
+{
+    border: 2px solid #3688AF;
+}
+
+#commentPosted
+{
+    background: #3688AF;
+    color: #fff;
+}
+
+#comments, #tagcloud, #sidebar
+{
+    border-left: 1px dotted #ccc;
+}
+
+.comment-meta
+{
+    color: #999999;
+}
+
+.entry-meta
+{
+    border-top: dotted 1px #ccc;
+}
+
+.entry-content img
+{
+    border: 1px solid #ccc;
+    box-shadow: -1px 1px 3px rgba(30,30,30, 0.3);
+    -moz-box-shadow: -1px 1px 3px rgba(30,30,30, 0.3);
+    -webkit-box-shadow: -1px 1px 3px rgba(30,30,30, 0.3); /*-moz-transform:rotate(-1deg);         -webkit-transform:rotate(-1deg);*/
+}
+
+.image-text
+{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.comments-link a
+{
+    background: #333 !important;
+}
+
+#archive h3, #archieve h3
+{
+    border-bottom: 1px solid #ccc;
+}
+#archive h4, #archieve h4
+{
+    background-color: #efefef;
+}
+
+#gravatar, .commentlist .photo
+{
+    border: 4px solid #3688AF;
+    box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+    -moz-box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+    -webkit-box-shadow: -1px 3px 3px rgba(30,30,30, 0.3);
+}
+
+.commentlist .photo
+{
+    border: 2px solid #3688AF;
+}
+
+#commentPosted
+{
+    background: #3688AF;
+    color: #fff;
+}
+
+#comments, #tagcloud
+{
+    border-left: 1px dotted #ccc;
+}
+
+#comments h3, #tagcloud h3, #respond h3, #sidebar h3, #tagcloud .alt h3
+{
+    color: #333;
+    text-shadow: 0px -1px 1px rgba(0,0,0,0.3);
+    border-bottom: 1px dotted #ccc;
+}
+
+input.error, #respond .form-input input.error
+{
+    background: #fff;
+    color: #000;
+    border: 2px solid #ff0000;
+}
+
+#blogroll ul li
+{
+    background: url("/css/feijoa/tinyarrow.png") no-repeat scroll left 4px;
+}
+
+.formcontainer
+{
+    background: #fff;
+}
+
+#respond .form-input input, #respond .form-input textarea, #respond .form-submit input
+{
+    background: #efefef;
+    border: 1px solid rgba(80,80,80, 0.2);
+}
+
+#respond .form-input input:focus, #respond .form-input textarea:focus
+{
+    border: 1px solid rgba(45,45,45, 0.9);
+}
+
+#respond .form-submit input, fieldset input[type=submit]
+{
+    background: #3688AF;
+    color: #fff;
+    text-shadow: 1px 1px 2px #3688AF;
+    box-shadow: -1px 1px 8px rgba(30,30,30, 0.2);
+    -moz-box-shadow: -1px 1px 8px rgba(30,30,30, 0.2);
+    -webkit-box-shadow: -1px 1px 8px rgba(30,30,30, 0.2);
+    -pie-background: linear-gradient(90deg, #84b5ce, rgba(54, 136, 175)); /*PIE /* I know I probably shouldn't */
+    background-image: url(/css/feijoa/gradient-black-bottom.jpg);
+    background-image: -moz-linear-gradient(center bottom , rgba(54, 136, 175, 1)  0%, rgba(54, 136, 175, 0.6) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, rgba(54, 136, 175, 1)), color-stop(0, rgba(54, 136, 175, 0.6)));
+    background-repeat: repeat-x;
+    border: 1px solid rgba(54, 136, 175, 0.9);
+}
+
+#respond h3, #tagcloud .alt h3
+{
+    color: #333;
+    border-bottom: solid 1px #ccc;
+    background: none;
+}
+
+#related ul
+{
+    background: #EFEFEF;
+    background: -moz-linear-gradient(top, rgb(245,245,245) 0, rgb(255,255,255) 30%, rgb(245,245,245) 100%) repeat scroll 0 0 transparent;
+    background: -webkit-gradient(linear,left top, left bottom,color-stop(0, rgb(245,245,245)),color-stop(0.3, rgb(255,255,255)), color-stop(1, rgb(245,245,245)));
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+}
+
+#related ul li
+{
+    background: url(feijoa/post.png) no-repeat #fff;
+    -moz-box-shadow: 0px -2px 5px #ccc;
+    -webkit-box-shadow: 0px -2px 5px #ccc;
+}
+
+ul.helper-links li a
+{
+    border-right: 1px solid #ccc;
+}
+
+.entry-content em
+{
+    color: #3688AF;
+}
+
+span.blog
+{
+    box-shadow: 1px 1px 3px #CCCCCC;
+    -moz-box-shadow: 1px 1px 3px #CCCCCC;
+    -webkit-box-shadow: 1px 1px 3px #CCCCCC;
+}
+
+#footer
+{
+    border-top: 1px solid #ccc;
+    border-top: 1px solid rgba(110,110,110,0.6);
+}
+
+.footer
+{
+    background-image: url(/css/feijoa/scratch2.png);
+    background-position: 0 -30px;
+    background-repeat: no-repeat;
+}
+
+#footer .colour-filter
+{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #ccc; 
+    filter: progid:DXImageTransform.Microsoft.gradient(endColorstr=#cccccc startColorstr=#ffffff); /* not because I want it to be the same in every browser */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(endColorstr=#cccccc startColorstr=#ffffff)";
+    background-image: url(feijoa/gradient-black-bottom.jpg);
+    background-image: -moz-linear-gradient(center bottom , rgba(50,50,50,0.4)  0%, rgba(250,250,250,0.9) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, rgba(50,50,50,0.4)), color-stop(0, rgba(250,250,250,0.9)));
+    background-repeat: repeat-x;
+    opacity:0.4;
+}
+
+#twitter
+{
+    background: url("/css/feijoa/footer-gfx.png") no-repeat scroll right 2px transparent;
+}
+
+
+#feijoa
+{
+    background: url("/css/feijoa/footer-gfx.png") no-repeat scroll right -129px transparent;
+}
+
+#rss
+{
+    background: url("/css/feijoa/footer-gfx.png") no-repeat scroll right -200px transparent;
+}
+
+
+
+
+
+
+/* Light Theme */ 
+#top
+{
+    /* who wants to make 1px repeating pngs? */
+    filter: progid:DXImageTransform.Microsoft.gradient( endColorstr=#333333 startColorstr=#000000);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient( endColorstr=#333333 startColorstr=#000000)";
+    background-color: #333;
+    background-image: -moz-linear-gradient(center bottom , #000000 0%, #666666 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, #000000), color-stop(0, #666666));
+    border-top: solid 1px #333;
+    border-top: solid 1px rgba(0,0,0,0.6);
+}
+
+#siteName
+{
+    text-shadow: 1px 1px 1px #333;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.8); 
+}
+#siteName a
+{
+    color: #fff;
+    color: rgba(255,255,255,1);
+}
+
+#topNavigation li a
+{
+    color: #fff;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.8);
+}
+ 
+#topNavigation li.current a
+{
+    color:#fff;
+}
+#top:before
+{
+    border-top: solid 89px rgba(0,0,0,0.3);
+}
+#topNavigation li.current span.marker, #topNavigation li.current:after
+{
+    background: #fff !important;
+}
+
+ #comments h3,  #tagcloud h3,  #respond h3,  #sidebar h3,  #tagcloud .alt h3
+{
+    color: #333;
+    text-shadow: rgba(0,0,0,0.8);
+}
+
+ #respond .form-input input:focus,  #respond .form-input textarea:focus
+{
+    border: 1px solid rgba(0,0,0,0.2);
+}
+
+ #respond .form-submit input,  fieldset input[type=submit]
+{
+    color: rgba(255,255,255,0.8);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+    box-shadow: -1px 1px 8px rgba(0,0,0,0.8);
+    -moz-box-shadow: -1px 1px 8px rgba(0,0,0,0.8);
+    -webkit-box-shadow: -1px 1px 8px rgba(0,0,0,0.8);
+}
+
+/* umbraco skin overrides after this line */
+
+  
+
+        #content a, #content a:active, #content a:visited,
+        #subNavigation a, #subNavigation a:active, #subNavigation a:visited{color: #66a803 !important ;}
+        #content a:hover{color: #f2ffc9 !important ;}
+        #siteName a{color: #ffffff !important;}
+        #topNavigation li a{color:#ffffff !important;}
+
+        #top{
+        filter:progid:DXImageTransform.Microsoft.gradient( endColorstr=#34960b startColorstr=#8ad62d) !important ;
+        -ms-filter:"progid:DXImageTransform.Microsoft.gradient( endColorstr=#34960b startColorstr=#8ad62d)" !important ;
+        background-color: #8ad62d !important ;
+        background-image: -moz-linear-gradient(center bottom , #34960b 0%, #8ad62d 100%) !important ;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, #34960b), color-stop(0, #8ad62d)) !important ;}
+
+        .top{background-image:url(/css/feijoa/fruity.png) !important ;background-repeat:no-repeat !important ; }
+        #siteDescription{color: #f2ffc9 !important ;}
+        #siteDescription{text-shadow: 1px 1px 2px rgba(0,0,0,0.17) !important ;}
+
+        #content .entry-meta a, #content .meta,
+        #content a.tagweight0, #content a.tagweight1, #content a.tagweight2,
+        #content a.tagweight3, #content a.tagweight4, #content a.tagweight5, .frontPage small
+        {color: #fff !important ;background: #66a803 !important ;opacity:0.3 !important ;}
+        a.tagweight0{opacity:0.1 !important ;}
+        a.tagweight1{opacity:0.6 !important ;}
+        a.tagweight2, a.tagweight3, a.tagweight4{opacity:1 !important ;}
+
+        .commentlist .photo{border:2px solid #66a803 !important ;}
+
+        #commentPosted{
+        background: #66a803 !important ;
+        color: #f2ffc9  !important;
+        }
+
+        #respond .form-submit input, fieldset input[type=submit]{
+        background: #66a803 !important ;
+        filter:progid:DXImageTransform.Microsoft.gradient( endColorstr=#34960b startColorstr=#8ad62d) !important ;
+        -ms-filter:"progid:DXImageTransform.Microsoft.gradient( endColorstr=#34960b startColorstr=#8ad62d)" !important ;
+        background-image: url(/css/feijoa/fruity.png) !important ;
+        background-image: -moz-linear-gradient(center bottom , #34960b  0%, #8ad62d 100%) !important ;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, #34960b), color-stop(0, #8ad62d)) !important ;
+        border:1px solid #66a803 !important ;
+        }
+
+        .entry-content em{color: #66a803 !important;}
+        ul.helper-links li a{color: #66a803 !important;}
+
+        #footer .colour-filter{
+        background: #8ad62d !important ;
+        filter:progid:DXImageTransform.Microsoft.gradient(endColorstr=#8ad62d startColorstr=#34960b) !important ;
+        -ms-filter:"progid:DXImageTransform.Microsoft.gradient(endColorstr=#8ad62d startColorstr=#34960b)" !important ;
+        background-image: -moz-linear-gradient(center bottom , #8ad62d  0%, #34960b 100%) !important ;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, #8ad62d), color-stop(0, #34960b)) !important ;
+        background-repeat:repeat-x !important ;
+        opacity:0.2 !important ;}
+
+        #footer .footer{background-image:url(/css/feijoa/fruity.png) !important ;background-repeat:no-repeat !important ;}
+
+        /*business package specific */
+        .frontPage a[href^=http://feeds]{color: #8ad62d !important;}
+
+
+
+        /* Light Theme */
+        #siteName{text-shadow: 1px 1px 1px rgba(0,0,0,0.22) !important ;}
+        #topNavigation li a{text-shadow:0px 1px 1px rgba(0,0,0,0.07) !important;}
+        #top:before{border-color: rgba(0,0,0,0.07) !important;}
+        #comments h3,#tagcloud h3, #respond h3,
+        #sidebar h3, #tagcloud .alt h3{text-shadow: 0px 1px 1px rgba(0,0,0,0.07) !important;}
+        #respond .form-submit input, fieldset input[type=submit]{
+        text-shadow:1px 1px 2px rgba(0,0,0,0.07) !important ;
+        box-shadow: -1px 1px 8px rgba(0,0,0,0.07) !important ;
+        -moz-box-shadow: -1px 1px 8px rgba(0,0,0,0.07) !important ;
+        -webkit-box-shadow: -1px 1px 8px rgba(0,0,0,0.07) !important ;
+        }
+    

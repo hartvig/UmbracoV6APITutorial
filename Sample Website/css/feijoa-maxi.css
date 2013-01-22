@@ -1,0 +1,305 @@
+
+body
+{
+    background: url(feijoa/bodybg.png) repeat-x 0 104px;
+}
+
+#body h2
+{
+    line-height: 1.2em;
+    padding-bottom: 8px;
+}
+
+#siteName, #siteDescription
+{
+    width: auto;
+}
+
+#siteDescription
+{
+    padding: 0 0 0 13px;
+    border: 0;
+    border-left: 1px solid rgba(255,255,255,0.2);
+    border-bottom: 0 !important;
+}
+
+.post
+{
+    position: relative !important;
+}
+
+#archive h3, #archieve h3
+{
+    margin: 0;
+    width: auto;
+}
+
+#archive .tab, #archieve .tab
+{
+    width: auto;
+}
+.tag-links
+{
+    margin-left: -58px;
+}
+#comments, #content, .post, #body .post, #tagcloud
+{
+    width: auto;
+    position: static;
+    float: none;
+}
+#comments
+{
+    border: 0;
+    padding: 0 9px 9px 0px;
+}
+
+#comments h3
+{
+    padding: 12px 0 5px 11px;
+}
+
+.form-label
+{
+    white-space: nowrap;
+}
+#tagcloud, #sidebar
+{
+    display: none;
+}
+
+.entry-content img
+{
+    width: 70%;
+    display: block;
+    height: auto;
+    -webkit-transform: rotate(0deg);
+    margin: 0 0 19px 0;
+}
+ol li
+{
+    margin: 0 0 22px 20px;
+}
+
+ol.commentlist li
+{
+    margin-left: 0;
+    padding: 8px 16px 0 16px;
+    list-style-type: none;
+}
+#comments
+{
+    position: relative;
+    width: auto;
+    float: none;
+}
+
+#comments, #tagcloud
+{
+    border-left: 0 !important;
+}
+#respond .form-submit input, fieldset input[type=submit]
+{
+    width: 97%;
+    margin-top: 15px;
+}
+#commentform
+{
+    padding: 0 10px;
+}
+.formcontainer
+{
+    padding: 0 16px 9px 16px;
+}
+span.blog
+{
+    display: none;
+}
+
+#siteName
+{
+    line-height: 1.1;
+    margin: 5px 0 5px 0;
+    white-space: nowrap;
+}
+#siteDescription
+{
+    margin: 20px 0px 0 15px;
+}
+.header, #main, .footer
+{
+    width: 100%;
+    padding: 0;
+}
+
+#body, .footer
+{
+    padding: 0 0.5em;
+}
+
+#top, #body
+{
+    height: auto;
+    width: auto;
+}
+#top
+{
+    padding: 0;
+    height: 104px;
+}
+
+#top:before
+{
+    content: "";
+    clear: both;
+    position: absolute;
+    display: block;
+    border-width: 29px !important;
+    top: 75px;
+    height: 0px;
+    width: 100%;
+}
+
+#body
+{
+    padding: 0.2em 1em 130px 1em;
+}
+.top
+{
+    padding: 0.2em 0.75em;
+    background-position: left top;
+}
+#topNavigation
+{
+    font-size: 0.9em;
+    clear: both;
+    float: none;
+    position: static;
+    margin: 0 0 0 -0.1em;
+}
+#topNavigation li
+{
+    padding-bottom: 17px;
+    white-space: nowrap;
+}
+#topNavigation li.current
+{
+    background: none;
+}
+
+#topNavigation li.current:after
+{
+    content: "";
+    width: 14px;
+    height: 7px;
+    display: block;
+    border-radius: 9px 9px 0px 0;
+    -moz-border-radius: 9px 9px 0px 0;
+    -o-border-radius: 9px 9px 0px 0;
+    -webkit-border-radius: 9px 9px 0px 0;
+    position: relative;
+    margin: 12px auto 0 auto;
+    text-align: center;
+}
+    
+.light #topNavigation li.current:after{background:#fff}
+.dark #topNavigation li.current:after{background:#000}
+
+#topNavigation li a
+{
+    padding: 6px 8px 8px;
+}
+
+#subNavigation
+{
+    float: left;
+    font-size: 0.8em;
+    height: auto;
+    margin-top: 14px;
+    margin-left: 3px;
+}
+
+#subNavigation li
+{
+    margin-bottom: 13px;
+}
+#subNavigation li a, #subNavigation li:first-child a
+{
+    margin: 0 5px 0 0px;
+    padding: 0 9px 0 0;
+    border-left: 0 !important;
+    border-right: solid 1px #ccc;
+}
+.dark #subNavigation li a, .dark #subNavigation li:first-child a
+{
+    border-color: rgba(255,255,255,0.3);
+}
+#body h2
+{
+    clear: both;
+}
+#subNavigation li:last-child a
+{
+    border: 0;
+}
+
+#main
+{
+    width: 100%;
+}
+
+#body
+{
+    padding-top: 0px;
+}
+
+.entry-date .day
+{
+    font-size: 12px;
+}
+
+.entry-date .month
+{
+    top: 3px;
+    right: 42px;
+}
+
+#related ul li a
+{
+    height: 54px;
+}
+#twitter
+{
+    margin: 0 0 0 -5px;
+}
+#feijoa
+{
+    right: 19px;
+}
+#rss
+{
+    left: 51px !important;
+}
+
+.image-text
+{
+    display: block !important;
+    font-family: 'Museo300' ,arial,serif;
+    font-size: 1.7em;
+    width: auto;
+    margin: 0 0 19px;
+}
+
+
+
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+    
+    .top
+    {
+        margin:0;
+        background-position: left top;
+    }
+    #siteDescription{
+     border-bottom: 0 !important;
+    }
+}

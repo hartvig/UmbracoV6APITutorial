@@ -1,0 +1,1674 @@
+2013-01-22 10:03:21,255 [11] INFO  Umbraco.Core.CoreBootManager - [Thread 1] Umbraco application starting
+2013-01-22 10:03:21,277 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Determining hash of code files on disk
+2013-01-22 10:03:21,282 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Hash determined (took 3ms)
+2013-01-22 10:03:21,371 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 83ms)
+2013-01-22 10:03:21,376 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 3ms)
+2013-01-22 10:03:21,380 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 2ms)
+2013-01-22 10:03:21,381 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 2ms)
+2013-01-22 10:03:21,384 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 2ms)
+2013-01-22 10:03:21,387 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 2ms)
+2013-01-22 10:03:21,390 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 2ms)
+2013-01-22 10:03:21,394 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 2ms)
+2013-01-22 10:03:21,409 [11] INFO  umbraco.content - [Thread 1] Loading content from database...
+2013-01-22 10:03:21,416 [11] ERROR umbraco.cms.businesslogic.web.DocumentType - [Thread 1] Exception while trying to build DTD for Xml schema; is Umbraco installed correctly and the connection string configured?
+System.InvalidOperationException: Can't find a connection string with the name 'umbracoDbDSN'
+   at Umbraco.Core.Persistence.Database..ctor(String connectionStringName)
+   at Umbraco.Core.Persistence.DefaultDatabaseFactory.CreateDatabase()
+   at Umbraco.Core.Persistence.UnitOfWork.PetaPocoUnitOfWorkProvider.GetUnitOfWork()
+   at Umbraco.Core.Services.ContentTypeService.GetAllContentTypes(Int32[] ids)
+   at umbraco.cms.businesslogic.web.DocumentType.GetAllAsList()
+   at umbraco.cms.businesslogic.web.DocumentType.GenerateXmlDocumentType()
+2013-01-22 10:03:21,418 [11] ERROR umbraco.BusinessLogic.Application - [Thread 1] Can't instantiate SQLHelper with connectionstring ""
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at umbraco.DataLayer.DataLayerHelper.CreateSqlHelper(String connectionString, Boolean forceLegacyConnection)
+   at umbraco.BusinessLogic.Application.get_SqlHelper()
+2013-01-22 10:03:21,418 [11] ERROR umbraco.BusinessLogic.Application - [Thread 1] Can't instantiate SQLHelper with connectionstring ""
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at umbraco.DataLayer.DataLayerHelper.CreateSqlHelper(String connectionString, Boolean forceLegacyConnection)
+   at umbraco.BusinessLogic.Application.get_SqlHelper()
+2013-01-22 10:03:21,418 [11] ERROR umbraco.content - [Thread 1] Error Republishing
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at umbraco.content.LoadContentFromDatabase()
+2013-01-22 10:03:21,423 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 3ms)
+2013-01-22 10:03:21,426 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 10:03:21,435 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 3ms)
+2013-01-22 10:03:21,463 [11] ERROR umbraco.BusinessLogic.Application - [Thread 1] Can't instantiate SQLHelper with connectionstring ""
+System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at umbraco.DataLayer.DataLayerHelper.CreateSqlHelper(String connectionString, Boolean forceLegacyConnection)
+   at umbraco.BusinessLogic.Application.get_SqlHelper()
+2013-01-22 10:03:21,463 [11] ERROR Umbraco.Core.PluginManager - [Thread 1] Error creating type umbraco.presentation.umbraco.Search.ExamineEvents
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.TypeInitializationException: The type initializer for 'Examine.ExamineManager' threw an exception. ---> System.Configuration.ConfigurationErrorsException: Object reference not set to an instance of an object. (C:\Websites\UmbracoCms.6.0.0-RC\config\ExamineSettings.config line 12) ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at UmbracoExamine.DataServices.UmbracoContentService.GetAllUserPropertyNames()
+   at UmbracoExamine.Config.IndexSetExtensions.ToIndexCriteria(IndexSet set, IDataService svc)
+   at UmbracoExamine.UmbracoContentIndexer.GetIndexerData(IndexSet indexSet)
+   at Examine.LuceneEngine.Providers.LuceneIndexer.Initialize(String name, NameValueCollection config)
+   at UmbracoExamine.BaseUmbracoIndexer.Initialize(String name, NameValueCollection config)
+   at UmbracoExamine.UmbracoContentIndexer.Initialize(String name, NameValueCollection config)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, Type providerType)
+   at Examine.ExamineManager.LoadProviders()
+   at Examine.ExamineManager..ctor()
+   at Examine.ExamineManager..cctor()
+   --- End of inner exception stack trace ---
+   at Examine.ExamineManager.get_Instance()
+   at UmbracoExamine.UmbracoEventManager..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at Umbraco.Core.PluginManager.CreateInstances[T](IEnumerable`1 types, Boolean throwException)
+2013-01-22 10:03:21,464 [11] INFO  Umbraco.Core.ApplicationContext - [Thread 1] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:21,465 [11] INFO  Umbraco.Core.ApplicationContext - [Thread 1] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:21,466 [11] ERROR Umbraco.Core.PluginManager - [Thread 1] Error creating type UmbracoExamine.UmbracoEventManager
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.TypeInitializationException: The type initializer for 'Examine.ExamineManager' threw an exception. ---> System.Configuration.ConfigurationErrorsException: Object reference not set to an instance of an object. (C:\Websites\UmbracoCms.6.0.0-RC\config\ExamineSettings.config line 12) ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at UmbracoExamine.DataServices.UmbracoContentService.GetAllUserPropertyNames()
+   at UmbracoExamine.Config.IndexSetExtensions.ToIndexCriteria(IndexSet set, IDataService svc)
+   at UmbracoExamine.UmbracoContentIndexer.GetIndexerData(IndexSet indexSet)
+   at Examine.LuceneEngine.Providers.LuceneIndexer.Initialize(String name, NameValueCollection config)
+   at UmbracoExamine.BaseUmbracoIndexer.Initialize(String name, NameValueCollection config)
+   at UmbracoExamine.UmbracoContentIndexer.Initialize(String name, NameValueCollection config)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   --- End of inner exception stack trace ---
+   at System.Web.Configuration.ProvidersHelper.InstantiateProvider(ProviderSettings providerSettings, Type providerType)
+   at System.Web.Configuration.ProvidersHelper.InstantiateProviders(ProviderSettingsCollection configProviders, ProviderCollection providers, Type providerType)
+   at Examine.ExamineManager.LoadProviders()
+   at Examine.ExamineManager..ctor()
+   at Examine.ExamineManager..cctor()
+   --- End of inner exception stack trace ---
+   at Examine.ExamineManager.get_Instance()
+   at UmbracoExamine.UmbracoEventManager..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at Umbraco.Core.PluginManager.CreateInstances[T](IEnumerable`1 types, Boolean throwException)
+2013-01-22 10:03:21,476 [11] INFO  Umbraco.Core.CoreBootManager - [Thread 1] Umbraco application startup complete (took 218ms)
+2013-01-22 10:03:21,550 [11] INFO  Umbraco.Core.ApplicationContext - [Thread 9] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:21,551 [11] WARN  Umbraco.Web.UmbracoModule - [Thread 9] Umbraco is not configured
+2013-01-22 10:03:38,900 [11] INFO  Umbraco.Core.DatabaseContext - [Thread 8] Configured new ConnectionString: Datasource=|DataDirectory|Umbraco.sdf
+2013-01-22 10:03:39,254 [11] ERROR umbraco.DataLayer.SqlHelper`1[[System.Data.SqlServerCe.SqlCeParameter, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91]] - [Thread 9] Error executing query delete from umbracoLog where datestamp < @oldestPermittedLogEntry and logHeader in ('open','system')
+SqlCE4Umbraco.SqlCeProviderException: Error running NonQuery: 
+SQL Statement:
+delete from umbracoLog where datestamp < @oldestPermittedLogEntry and logHeader in ('open','system')
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ umbracoLog ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteNonQuery()
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteNonQuery(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteNonQuery(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteNonQuery(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteNonQuery(String commandText, IParameter[] parameters)
+2013-01-22 10:03:39,257 [11] INFO  Umbraco.Web.UmbracoApplication - [Thread 9] Application shutdown. Reason: ConfigurationChange
+2013-01-22 10:03:39,869 [11] INFO  Umbraco.Core.CoreBootManager - [Thread 16] Umbraco application starting
+2013-01-22 10:03:39,904 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Determining hash of code files on disk
+2013-01-22 10:03:39,908 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Hash determined (took 3ms)
+2013-01-22 10:03:39,921 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 6ms)
+2013-01-22 10:03:39,924 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 3ms)
+2013-01-22 10:03:39,926 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 1ms)
+2013-01-22 10:03:39,927 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 0ms)
+2013-01-22 10:03:39,929 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 1ms)
+2013-01-22 10:03:39,930 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 0ms)
+2013-01-22 10:03:39,930 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2013-01-22 10:03:39,931 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 0ms)
+2013-01-22 10:03:39,943 [11] INFO  umbraco.content - [Thread 16] Loading content from database...
+2013-01-22 10:03:40,013 [11] INFO  Umbraco.Core.Persistence.UmbracoDatabase - [Thread 16]    at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at Umbraco.Core.Persistence.Database.<Query>d__7`1.MoveNext()
+2013-01-22 10:03:40,022 [11] ERROR umbraco.cms.businesslogic.web.DocumentType - [Thread 16] Exception while trying to build DTD for Xml schema; is Umbraco installed correctly and the connection string configured?
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ umbracoNode ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   at Umbraco.Core.Persistence.Database.<Query>d__7`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Umbraco.Core.Persistence.Repositories.ContentTypeRepository.<PerformGetAll>d__2.MoveNext()
+   at Umbraco.Core.Persistence.Repositories.RepositoryBase`2.GetAll(TId[] ids)
+   at Umbraco.Core.Services.ContentTypeService.GetAllContentTypes(Int32[] ids)
+   at umbraco.cms.businesslogic.web.DocumentType.GetAllAsList()
+   at umbraco.cms.businesslogic.web.DocumentType.GenerateXmlDocumentType()
+2013-01-22 10:03:40,054 [11] ERROR umbraco.DataLayer.SqlHelper`1[[System.Data.SqlServerCe.SqlCeParameter, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91]] - [Thread 16] Error executing query select umbracoNode.id, umbracoNode.parentId, umbracoNode.sortOrder, cmsContentXml.xml from umbracoNode 
+inner join cmsContentXml on cmsContentXml.nodeId = umbracoNode.id and umbracoNode.nodeObjectType = @type
+inner join cmsDocument on cmsDocument.nodeId = umbracoNode.id
+where cmsDocument.published = 1 
+order by umbracoNode.level, umbracoNode.sortOrder
+SqlCE4Umbraco.SqlCeProviderException: Error running Reader: 
+SQL Statement:
+select umbracoNode.id, umbracoNode.parentId, umbracoNode.sortOrder, cmsContentXml.xml from umbracoNode  inner join cmsContentXml on cmsContentXml.nodeId = umbracoNode.id and umbracoNode.nodeObjectType = @type inner join cmsDocument on cmsDocument.nodeId = umbracoNode.id where cmsDocument.published = 1  order by umbracoNode.level, umbracoNode.sortOrder
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ umbracoNode ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteReader(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+2013-01-22 10:03:40,055 [11] ERROR umbraco.content - [Thread 16] Error Republishing
+umbraco.DataLayer.SqlHelperException: Umbraco Exception (DataLayer): SQL helper exception in ExecuteReader ---> SqlCE4Umbraco.SqlCeProviderException: Error running Reader: 
+SQL Statement:
+select umbracoNode.id, umbracoNode.parentId, umbracoNode.sortOrder, cmsContentXml.xml from umbracoNode  inner join cmsContentXml on cmsContentXml.nodeId = umbracoNode.id and umbracoNode.nodeObjectType = @type inner join cmsDocument on cmsDocument.nodeId = umbracoNode.id where cmsDocument.published = 1  order by umbracoNode.level, umbracoNode.sortOrder
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ umbracoNode ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteReader(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+   --- End of inner exception stack trace ---
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+   at umbraco.content.LoadContentFromDatabase()
+2013-01-22 10:03:40,058 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2013-01-22 10:03:40,058 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2013-01-22 10:03:40,062 [11] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 1ms)
+2013-01-22 10:03:40,103 [11] ERROR umbraco.DataLayer.SqlHelper`1[[System.Data.SqlServerCe.SqlCeParameter, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91]] - [Thread 16] Error executing query select distinct alias from cmsPropertyType order by alias
+SqlCE4Umbraco.SqlCeProviderException: Error running Reader: 
+SQL Statement:
+select distinct alias from cmsPropertyType order by alias
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ cmsPropertyType ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteReader(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+2013-01-22 10:03:40,106 [11] ERROR umbraco.DataLayer.SqlHelper`1[[System.Data.SqlServerCe.SqlCeParameter, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91]] - [Thread 16] Error executing query select distinct alias from cmsPropertyType order by alias
+SqlCE4Umbraco.SqlCeProviderException: Error running Reader: 
+SQL Statement:
+select distinct alias from cmsPropertyType order by alias
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ cmsPropertyType ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteReader(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+2013-01-22 10:03:40,112 [11] ERROR umbraco.DataLayer.SqlHelper`1[[System.Data.SqlServerCe.SqlCeParameter, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91]] - [Thread 16] Error executing query select distinct alias from cmsPropertyType order by alias
+SqlCE4Umbraco.SqlCeProviderException: Error running Reader: 
+SQL Statement:
+select distinct alias from cmsPropertyType order by alias
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ cmsPropertyType ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteReader(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+2013-01-22 10:03:40,207 [11] ERROR umbraco.DataLayer.SqlHelper`1[[System.Data.SqlServerCe.SqlCeParameter, System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91]] - [Thread 16] Error executing query select 
+	            umbracoNode.id, umbracoNode.uniqueId, umbracoNode.level, 
+	            umbracoNode.parentId, umbracoNode.path, umbracoNode.sortOrder, umbracoNode.createDate, 
+	            umbracoNode.nodeUser, umbracoNode.text, 
+	            cmsMember.Email, cmsMember.LoginName, cmsMember.Password
+            from umbracoNode 
+            inner join cmsContent on cmsContent.nodeId = umbracoNode.id
+            inner join cmsMember on  cmsMember.nodeId = cmsContent.nodeId
+			where umbracoNode.nodeObjectType = @nodeObjectType AND 1=1			
+			order by umbracoNode.text
+SqlCE4Umbraco.SqlCeProviderException: Error running Reader: 
+SQL Statement:
+select  	            umbracoNode.id, umbracoNode.uniqueId, umbracoNode.level,  	            umbracoNode.parentId, umbracoNode.path, umbracoNode.sortOrder, umbracoNode.createDate,  	            umbracoNode.nodeUser, umbracoNode.text,  	            cmsMember.Email, cmsMember.LoginName, cmsMember.Password             from umbracoNode              inner join cmsContent on cmsContent.nodeId = umbracoNode.id             inner join cmsMember on  cmsMember.nodeId = cmsContent.nodeId 			where umbracoNode.nodeObjectType = @nodeObjectType AND 1=1			 			order by umbracoNode.text
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ umbracoNode ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteReader(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+2013-01-22 10:03:40,207 [11] ERROR Umbraco.Core.PluginManager - [Thread 16] Error creating type umbraco.presentation.umbraco.Search.ExamineEvents
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.TypeInitializationException: The type initializer for 'Examine.ExamineManager' threw an exception. ---> umbraco.DataLayer.SqlHelperException: Umbraco Exception (DataLayer): SQL helper exception in ExecuteReader ---> SqlCE4Umbraco.SqlCeProviderException: Error running Reader: 
+SQL Statement:
+select  	            umbracoNode.id, umbracoNode.uniqueId, umbracoNode.level,  	            umbracoNode.parentId, umbracoNode.path, umbracoNode.sortOrder, umbracoNode.createDate,  	            umbracoNode.nodeUser, umbracoNode.text,  	            cmsMember.Email, cmsMember.LoginName, cmsMember.Password             from umbracoNode              inner join cmsContent on cmsContent.nodeId = umbracoNode.id             inner join cmsMember on  cmsMember.nodeId = cmsContent.nodeId 			where umbracoNode.nodeObjectType = @nodeObjectType AND 1=1			 			order by umbracoNode.text
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ umbracoNode ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteReader(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+   --- End of inner exception stack trace ---
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+   at umbraco.cms.businesslogic.member.Member.GetAllAsList()
+   at UmbracoExamine.UmbracoMemberIndexer.GetXDocument(String xPath, String type)
+   at UmbracoExamine.BaseUmbracoIndexer.AddNodesToIndex(String xPath, String type)
+   at UmbracoExamine.BaseUmbracoIndexer.PerformIndexAll(String type)
+   at Examine.LuceneEngine.Providers.LuceneIndexer.IndexAll(String type)
+   at UmbracoExamine.BaseUmbracoIndexer.PerformIndexRebuild()
+   at UmbracoExamine.UmbracoContentIndexer.RebuildIndex()
+   at Examine.ExamineManager.LoadProviders()
+   at Examine.ExamineManager..ctor()
+   at Examine.ExamineManager..cctor()
+   --- End of inner exception stack trace ---
+   at Examine.ExamineManager.get_Instance()
+   at UmbracoExamine.UmbracoEventManager..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at Umbraco.Core.PluginManager.CreateInstances[T](IEnumerable`1 types, Boolean throwException)
+2013-01-22 10:03:40,209 [11] INFO  Umbraco.Core.ApplicationContext - [Thread 16] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:40,209 [11] INFO  Umbraco.Core.ApplicationContext - [Thread 16] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:40,210 [11] ERROR Umbraco.Core.PluginManager - [Thread 16] Error creating type UmbracoExamine.UmbracoEventManager
+System.Reflection.TargetInvocationException: Exception has been thrown by the target of an invocation. ---> System.TypeInitializationException: The type initializer for 'Examine.ExamineManager' threw an exception. ---> umbraco.DataLayer.SqlHelperException: Umbraco Exception (DataLayer): SQL helper exception in ExecuteReader ---> SqlCE4Umbraco.SqlCeProviderException: Error running Reader: 
+SQL Statement:
+select  	            umbracoNode.id, umbracoNode.uniqueId, umbracoNode.level,  	            umbracoNode.parentId, umbracoNode.path, umbracoNode.sortOrder, umbracoNode.createDate,  	            umbracoNode.nodeUser, umbracoNode.text,  	            cmsMember.Email, cmsMember.LoginName, cmsMember.Password             from umbracoNode              inner join cmsContent on cmsContent.nodeId = umbracoNode.id             inner join cmsMember on  cmsMember.nodeId = cmsContent.nodeId 			where umbracoNode.nodeObjectType = @nodeObjectType AND 1=1			 			order by umbracoNode.text
+
+Exception:
+System.Data.SqlServerCe.SqlCeException (0x80004005): The specified table does not exist. [ umbracoNode ]
+   at System.Data.SqlServerCe.SqlCeCommand.ProcessResults(Int32 hr)
+   at System.Data.SqlServerCe.SqlCeCommand.CompileQueryPlan()
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteCommand(CommandBehavior behavior, String method, ResultSetOptions options)
+   at System.Data.SqlServerCe.SqlCeCommand.ExecuteReader(CommandBehavior behavior)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCeApplicationBlock.ExecuteReader(String connectionString, CommandType commandType, String commandText, SqlCeParameter[] commandParameters)
+   at SqlCE4Umbraco.SqlCEHelper.ExecuteReader(String commandText, SqlCeParameter[] parameters)
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+   --- End of inner exception stack trace ---
+   at umbraco.DataLayer.SqlHelper`1.ExecuteReader(String commandText, IParameter[] parameters)
+   at umbraco.cms.businesslogic.member.Member.GetAllAsList()
+   at UmbracoExamine.UmbracoMemberIndexer.GetXDocument(String xPath, String type)
+   at UmbracoExamine.BaseUmbracoIndexer.AddNodesToIndex(String xPath, String type)
+   at UmbracoExamine.BaseUmbracoIndexer.PerformIndexAll(String type)
+   at Examine.LuceneEngine.Providers.LuceneIndexer.IndexAll(String type)
+   at UmbracoExamine.BaseUmbracoIndexer.PerformIndexRebuild()
+   at UmbracoExamine.UmbracoContentIndexer.RebuildIndex()
+   at Examine.ExamineManager.LoadProviders()
+   at Examine.ExamineManager..ctor()
+   at Examine.ExamineManager..cctor()
+   --- End of inner exception stack trace ---
+   at Examine.ExamineManager.get_Instance()
+   at UmbracoExamine.UmbracoEventManager..ctor()
+   --- End of inner exception stack trace ---
+   at System.RuntimeTypeHandle.CreateInstance(RuntimeType type, Boolean publicOnly, Boolean noCheck, Boolean& canBeCached, RuntimeMethodHandleInternal& ctor, Boolean& bNeedSecurityCheck)
+   at System.RuntimeType.CreateInstanceSlow(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.RuntimeType.CreateInstanceDefaultCtor(Boolean publicOnly, Boolean skipCheckThis, Boolean fillCache, StackCrawlMark& stackMark)
+   at System.Activator.CreateInstance(Type type, Boolean nonPublic)
+   at System.Activator.CreateInstance(Type type)
+   at Umbraco.Core.PluginManager.CreateInstances[T](IEnumerable`1 types, Boolean throwException)
+2013-01-22 10:03:40,217 [11] INFO  Umbraco.Core.CoreBootManager - [Thread 16] Umbraco application startup complete (took 346ms)
+2013-01-22 10:03:40,612 [11] INFO  umbraco.presentation.install.utills.p - [Thread 14] Running 'installOrUpgrade' service
+2013-01-22 10:03:40,615 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Initializing database schema creation
+2013-01-22 10:03:40,671 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoNode] ([id] INTEGER NOT NULL IDENTITY(1045,1),
+[trashed] BIT NOT NULL CONSTRAINT [DF_umbracoNode_trashed] DEFAULT ('0'),
+[parentID] INTEGER NOT NULL,
+[nodeUser] INTEGER NULL,
+[level] INTEGER NOT NULL,
+[path] NVARCHAR(150) NOT NULL,
+[sortOrder] INTEGER NOT NULL,
+[uniqueID] UniqueIdentifier NULL,
+[text] NVARCHAR(255) NULL,
+[nodeObjectType] UniqueIdentifier NULL,
+[createDate] DATETIME NOT NULL CONSTRAINT [DF_umbracoNode_createDate] DEFAULT (getdate()))
+2013-01-22 10:03:40,671 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoNode] ADD CONSTRAINT [PK_structure] PRIMARY KEY ([id])
+2013-01-22 10:03:40,672 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoNode
+2013-01-22 10:03:40,696 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoNode
+2013-01-22 10:03:40,696 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoNode] ADD CONSTRAINT [FK_umbracoNode_umbracoNode_id] FOREIGN KEY ([parentID]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,696 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_umbracoNodeParentId] ON [umbracoNode] ([parentID])
+2013-01-22 10:03:40,696 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_umbracoNodeObjectType] ON [umbracoNode] ([nodeObjectType])
+2013-01-22 10:03:40,702 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoNode' was created
+2013-01-22 10:03:40,704 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsTemplate] ([pk] INTEGER NOT NULL IDENTITY(1,1),
+[nodeId] INTEGER NOT NULL,
+[master] INTEGER NULL,
+[alias] NVARCHAR(100) NULL,
+[design] NTEXT NOT NULL)
+2013-01-22 10:03:40,704 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsTemplate] ADD CONSTRAINT [PK_cmsTemplate] PRIMARY KEY ([pk])
+2013-01-22 10:03:40,704 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsTemplate
+2013-01-22 10:03:40,704 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsTemplate
+2013-01-22 10:03:40,704 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsTemplate] ADD CONSTRAINT [FK_cmsTemplate_umbracoNode] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,704 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsTemplate] ADD CONSTRAINT [FK_cmsTemplate_cmsTemplate] FOREIGN KEY ([master]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,704 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE UNIQUE NONCLUSTERED INDEX [IX_cmsTemplate_nodeId] ON [cmsTemplate] ([nodeId])
+2013-01-22 10:03:40,706 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsTemplate' was created
+2013-01-22 10:03:40,707 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsContent] ([pk] INTEGER NOT NULL IDENTITY(1,1),
+[nodeId] INTEGER NOT NULL,
+[contentType] INTEGER NOT NULL)
+2013-01-22 10:03:40,707 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsContent] ADD CONSTRAINT [PK_cmsContent] PRIMARY KEY ([pk])
+2013-01-22 10:03:40,708 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsContent
+2013-01-22 10:03:40,708 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsContent
+2013-01-22 10:03:40,708 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsContent] ADD CONSTRAINT [FK_cmsContent_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,708 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE UNIQUE NONCLUSTERED INDEX [IX_cmsContent] ON [cmsContent] ([nodeId])
+2013-01-22 10:03:40,708 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsContent' was created
+2013-01-22 10:03:40,710 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsContentVersion] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[ContentId] INTEGER NOT NULL,
+[VersionId] UniqueIdentifier NOT NULL,
+[VersionDate] DATETIME NOT NULL CONSTRAINT [DF_cmsContentVersion_VersionDate] DEFAULT (getdate()),
+[LanguageLocale] NVARCHAR(10) NULL)
+2013-01-22 10:03:40,711 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsContentVersion] ADD CONSTRAINT [PK_cmsContentVersion] PRIMARY KEY ([id])
+2013-01-22 10:03:40,711 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsContentVersion
+2013-01-22 10:03:40,711 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsContentVersion
+2013-01-22 10:03:40,711 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsContentVersion] ADD CONSTRAINT [FK_cmsContentVersion_cmsContent_nodeId] FOREIGN KEY ([ContentId]) REFERENCES [cmsContent] ([nodeId])
+2013-01-22 10:03:40,711 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE UNIQUE NONCLUSTERED INDEX [IX_cmsContentVersion_VersionId] ON [cmsContentVersion] ([VersionId])
+2013-01-22 10:03:40,711 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsContentVersion' was created
+2013-01-22 10:03:40,715 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsDocument] ([nodeId] INTEGER NOT NULL,
+[published] BIT NOT NULL,
+[documentUser] INTEGER NOT NULL,
+[versionId] UniqueIdentifier NOT NULL,
+[text] NVARCHAR(255) NOT NULL,
+[releaseDate] DATETIME NULL,
+[expireDate] DATETIME NULL,
+[updateDate] DATETIME NOT NULL CONSTRAINT [DF_cmsDocument_updateDate] DEFAULT (getdate()),
+[templateId] INTEGER NULL,
+[alias] NVARCHAR(255) NULL,
+[newest] BIT NOT NULL CONSTRAINT [DF_cmsDocument_newest] DEFAULT ('0'))
+2013-01-22 10:03:40,715 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsDocument] ADD CONSTRAINT [PK_cmsDocument] PRIMARY KEY ([versionId])
+2013-01-22 10:03:40,715 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsDocument
+2013-01-22 10:03:40,715 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsDocument
+2013-01-22 10:03:40,716 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsDocument] ADD CONSTRAINT [FK_cmsDocument_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,716 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsDocument] ADD CONSTRAINT [FK_cmsDocument_cmsContent_nodeId] FOREIGN KEY ([nodeId]) REFERENCES [cmsContent] ([nodeId])
+2013-01-22 10:03:40,716 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsDocument] ADD CONSTRAINT [FK_cmsDocument_cmsTemplate_nodeId] FOREIGN KEY ([templateId]) REFERENCES [cmsTemplate] ([nodeId])
+2013-01-22 10:03:40,716 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE UNIQUE NONCLUSTERED INDEX [IX_cmsDocument] ON [cmsDocument] ([nodeId],[versionId])
+2013-01-22 10:03:40,716 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsDocument' was created
+2013-01-22 10:03:40,719 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsContentType] ([pk] INTEGER NOT NULL IDENTITY(535,1),
+[nodeId] INTEGER NOT NULL,
+[alias] NVARCHAR(255) NULL,
+[icon] NVARCHAR(255) NULL,
+[thumbnail] NVARCHAR(255) NOT NULL CONSTRAINT [DF_cmsContentType_thumbnail] DEFAULT ('folder.png'),
+[description] NVARCHAR(1500) NULL,
+[isContainer] BIT NOT NULL CONSTRAINT [DF_cmsContentType_isContainer] DEFAULT ('0'),
+[allowAtRoot] BIT NOT NULL CONSTRAINT [DF_cmsContentType_allowAtRoot] DEFAULT ('0'))
+2013-01-22 10:03:40,720 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsContentType] ADD CONSTRAINT [PK_cmsContentType] PRIMARY KEY ([pk])
+2013-01-22 10:03:40,720 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsContentType
+2013-01-22 10:03:40,722 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsContentType
+2013-01-22 10:03:40,723 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsContentType] ADD CONSTRAINT [FK_cmsContentType_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,725 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE UNIQUE NONCLUSTERED INDEX [IX_cmsContentType] ON [cmsContentType] ([nodeId])
+2013-01-22 10:03:40,726 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_cmsContentType_icon] ON [cmsContentType] ([icon])
+2013-01-22 10:03:40,726 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsContentType' was created
+2013-01-22 10:03:40,728 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsDocumentType] ([contentTypeNodeId] INTEGER NOT NULL,
+[templateNodeId] INTEGER NOT NULL,
+[IsDefault] BIT NOT NULL CONSTRAINT [DF_cmsDocumentType_IsDefault] DEFAULT ('0'))
+2013-01-22 10:03:40,728 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsDocumentType] ADD CONSTRAINT [PK_cmsDocumentType] PRIMARY KEY ([contentTypeNodeId], [templateNodeId])
+2013-01-22 10:03:40,728 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsDocumentType
+2013-01-22 10:03:40,728 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsDocumentType
+2013-01-22 10:03:40,729 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsDocumentType] ADD CONSTRAINT [FK_cmsDocumentType_cmsContentType_nodeId] FOREIGN KEY ([contentTypeNodeId]) REFERENCES [cmsContentType] ([nodeId])
+2013-01-22 10:03:40,729 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsDocumentType] ADD CONSTRAINT [FK_cmsDocumentType_umbracoNode_id] FOREIGN KEY ([contentTypeNodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,729 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsDocumentType] ADD CONSTRAINT [FK_cmsDocumentType_cmsTemplate_nodeId] FOREIGN KEY ([templateNodeId]) REFERENCES [cmsTemplate] ([nodeId])
+2013-01-22 10:03:40,729 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsDocumentType' was created
+2013-01-22 10:03:40,732 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsDataType] ([pk] INTEGER NOT NULL IDENTITY(25,1),
+[nodeId] INTEGER NOT NULL,
+[controlId] UniqueIdentifier NOT NULL,
+[dbType] NVARCHAR(50) NOT NULL)
+2013-01-22 10:03:40,732 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsDataType] ADD CONSTRAINT [PK_cmsDataType] PRIMARY KEY ([pk])
+2013-01-22 10:03:40,732 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsDataType
+2013-01-22 10:03:40,740 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsDataType
+2013-01-22 10:03:40,741 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsDataType] ADD CONSTRAINT [FK_cmsDataType_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,741 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE UNIQUE NONCLUSTERED INDEX [IX_cmsDataType_nodeId] ON [cmsDataType] ([nodeId])
+2013-01-22 10:03:40,742 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsDataType' was created
+2013-01-22 10:03:40,744 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsDataTypePreValues] ([id] INTEGER NOT NULL IDENTITY(5,1),
+[datatypeNodeId] INTEGER NOT NULL,
+[value] NVARCHAR(2500) NULL,
+[sortorder] INTEGER NOT NULL,
+[alias] NVARCHAR(50) NULL)
+2013-01-22 10:03:40,744 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsDataTypePreValues] ADD CONSTRAINT [PK_cmsDataTypePreValues] PRIMARY KEY ([id])
+2013-01-22 10:03:40,744 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsDataTypePreValues
+2013-01-22 10:03:40,746 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsDataTypePreValues
+2013-01-22 10:03:40,746 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsDataTypePreValues] ADD CONSTRAINT [FK_cmsDataTypePreValues_cmsDataType_nodeId] FOREIGN KEY ([datatypeNodeId]) REFERENCES [cmsDataType] ([nodeId])
+2013-01-22 10:03:40,746 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsDataTypePreValues' was created
+2013-01-22 10:03:40,747 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsDictionary] ([pk] INTEGER NOT NULL IDENTITY(1,1),
+[id] UniqueIdentifier NOT NULL,
+[parent] UniqueIdentifier NOT NULL,
+[key] NVARCHAR(1000) NOT NULL)
+2013-01-22 10:03:40,748 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsDictionary] ADD CONSTRAINT [PK_cmsDictionary] PRIMARY KEY ([pk])
+2013-01-22 10:03:40,748 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsDictionary
+2013-01-22 10:03:40,748 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsDictionary
+2013-01-22 10:03:40,748 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE UNIQUE NONCLUSTERED INDEX [IX_cmsDictionary_id] ON [cmsDictionary] ([id])
+2013-01-22 10:03:40,748 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsDictionary' was created
+2013-01-22 10:03:40,751 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsLanguageText] ([pk] INTEGER NOT NULL IDENTITY(1,1),
+[languageId] INTEGER NOT NULL,
+[UniqueId] UniqueIdentifier NOT NULL,
+[value] NVARCHAR(1000) NOT NULL)
+2013-01-22 10:03:40,751 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsLanguageText] ADD CONSTRAINT [PK_cmsLanguageText] PRIMARY KEY ([pk])
+2013-01-22 10:03:40,751 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsLanguageText
+2013-01-22 10:03:40,751 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsLanguageText
+2013-01-22 10:03:40,751 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsLanguageText] ADD CONSTRAINT [FK_cmsLanguageText_cmsDictionary_id] FOREIGN KEY ([UniqueId]) REFERENCES [cmsDictionary] ([id])
+2013-01-22 10:03:40,751 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsLanguageText' was created
+2013-01-22 10:03:40,753 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoLanguage] ([id] INTEGER NOT NULL IDENTITY(2,1),
+[languageISOCode] NVARCHAR(10) NULL,
+[languageCultureName] NVARCHAR(100) NULL)
+2013-01-22 10:03:40,753 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoLanguage] ADD CONSTRAINT [PK_umbracoLanguage] PRIMARY KEY ([id])
+2013-01-22 10:03:40,753 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoLanguage
+2013-01-22 10:03:40,754 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoLanguage
+2013-01-22 10:03:40,754 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE UNIQUE NONCLUSTERED INDEX [IX_umbracoLanguage_languageISOCode] ON [umbracoLanguage] ([languageISOCode])
+2013-01-22 10:03:40,754 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoLanguage' was created
+2013-01-22 10:03:40,756 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoDomains] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[domainDefaultLanguage] INTEGER NULL,
+[domainRootStructureID] INTEGER NULL,
+[domainName] NVARCHAR(255) NOT NULL)
+2013-01-22 10:03:40,756 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoDomains] ADD CONSTRAINT [PK_umbracoDomains] PRIMARY KEY ([id])
+2013-01-22 10:03:40,756 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoDomains
+2013-01-22 10:03:40,756 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoDomains
+2013-01-22 10:03:40,757 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoDomains] ADD CONSTRAINT [FK_umbracoDomains_umbracoNode_id] FOREIGN KEY ([domainRootStructureID]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,757 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoDomains' was created
+2013-01-22 10:03:40,759 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoLog] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[userId] INTEGER NOT NULL,
+[NodeId] INTEGER NOT NULL,
+[Datestamp] DATETIME NOT NULL CONSTRAINT [DF_umbracoLog_Datestamp] DEFAULT (getdate()),
+[logHeader] NVARCHAR(50) NOT NULL,
+[logComment] NVARCHAR(4000) NULL)
+2013-01-22 10:03:40,759 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoLog] ADD CONSTRAINT [PK_umbracoLog] PRIMARY KEY ([id])
+2013-01-22 10:03:40,759 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoLog
+2013-01-22 10:03:40,759 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoLog
+2013-01-22 10:03:40,759 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_umbracoLog] ON [umbracoLog] ([NodeId])
+2013-01-22 10:03:40,760 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoLog' was created
+2013-01-22 10:03:40,762 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsMacro] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[macroUseInEditor] BIT NOT NULL CONSTRAINT [DF_cmsMacro_macroUseInEditor] DEFAULT ('0'),
+[macroRefreshRate] INTEGER NOT NULL CONSTRAINT [DF_cmsMacro_macroRefreshRate] DEFAULT ('0'),
+[macroAlias] NVARCHAR(255) NOT NULL,
+[macroName] NVARCHAR(255) NULL,
+[macroScriptType] NVARCHAR(255) NULL,
+[macroScriptAssembly] NVARCHAR(255) NULL,
+[macroXSLT] NVARCHAR(255) NULL,
+[macroCacheByPage] BIT NOT NULL CONSTRAINT [DF_cmsMacro_macroCacheByPage] DEFAULT ('1'),
+[macroCachePersonalized] BIT NOT NULL CONSTRAINT [DF_cmsMacro_macroCachePersonalized] DEFAULT ('0'),
+[macroDontRender] BIT NOT NULL CONSTRAINT [DF_cmsMacro_macroDontRender] DEFAULT ('0'),
+[macroPython] NVARCHAR(255) NULL)
+2013-01-22 10:03:40,763 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsMacro] ADD CONSTRAINT [PK_cmsMacro] PRIMARY KEY ([id])
+2013-01-22 10:03:40,763 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsMacro
+2013-01-22 10:03:40,763 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsMacro
+2013-01-22 10:03:40,763 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsMacro' was created
+2013-01-22 10:03:40,765 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsMacroPropertyType] ([id] INTEGER NOT NULL IDENTITY(26,1),
+[macroPropertyTypeAlias] NVARCHAR(50) NULL,
+[macroPropertyTypeRenderAssembly] NVARCHAR(255) NULL,
+[macroPropertyTypeRenderType] NVARCHAR(255) NULL,
+[macroPropertyTypeBaseType] NVARCHAR(255) NULL)
+2013-01-22 10:03:40,765 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsMacroPropertyType] ADD CONSTRAINT [PK_cmsMacroPropertyType] PRIMARY KEY ([id])
+2013-01-22 10:03:40,765 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsMacroPropertyType
+2013-01-22 10:03:40,770 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsMacroPropertyType
+2013-01-22 10:03:40,770 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsMacroPropertyType' was created
+2013-01-22 10:03:40,772 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsMacroProperty] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[macroPropertyHidden] BIT NOT NULL CONSTRAINT [DF_cmsMacroProperty_macroPropertyHidden] DEFAULT ('0'),
+[macroPropertyType] INTEGER NOT NULL,
+[macro] INTEGER NOT NULL,
+[macroPropertySortOrder] INTEGER NOT NULL CONSTRAINT [DF_cmsMacroProperty_macroPropertySortOrder] DEFAULT ('0'),
+[macroPropertyAlias] NVARCHAR(50) NOT NULL,
+[macroPropertyName] NVARCHAR(255) NOT NULL)
+2013-01-22 10:03:40,772 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsMacroProperty] ADD CONSTRAINT [PK_cmsMacroProperty] PRIMARY KEY ([id])
+2013-01-22 10:03:40,772 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsMacroProperty
+2013-01-22 10:03:40,772 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsMacroProperty
+2013-01-22 10:03:40,773 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsMacroProperty] ADD CONSTRAINT [FK_cmsMacroProperty_cmsMacroPropertyType_id] FOREIGN KEY ([macroPropertyType]) REFERENCES [cmsMacroPropertyType] ([id])
+2013-01-22 10:03:40,773 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsMacroProperty] ADD CONSTRAINT [FK_cmsMacroProperty_cmsMacro_id] FOREIGN KEY ([macro]) REFERENCES [cmsMacro] ([id])
+2013-01-22 10:03:40,773 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsMacroProperty' was created
+2013-01-22 10:03:40,776 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsMemberType] ([pk] INTEGER NOT NULL IDENTITY(1,1),
+[NodeId] INTEGER NOT NULL,
+[propertytypeId] INTEGER NOT NULL,
+[memberCanEdit] BIT NOT NULL CONSTRAINT [DF_cmsMemberType_memberCanEdit] DEFAULT ('0'),
+[viewOnProfile] BIT NOT NULL CONSTRAINT [DF_cmsMemberType_viewOnProfile] DEFAULT ('0'))
+2013-01-22 10:03:40,776 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsMemberType] ADD CONSTRAINT [PK_cmsMemberType] PRIMARY KEY ([pk])
+2013-01-22 10:03:40,776 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsMemberType
+2013-01-22 10:03:40,776 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsMemberType
+2013-01-22 10:03:40,777 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsMemberType] ADD CONSTRAINT [FK_cmsMemberType_cmsContentType_nodeId] FOREIGN KEY ([NodeId]) REFERENCES [cmsContentType] ([nodeId])
+2013-01-22 10:03:40,777 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsMemberType] ADD CONSTRAINT [FK_cmsMemberType_umbracoNode_id] FOREIGN KEY ([NodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,777 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsMemberType' was created
+2013-01-22 10:03:40,779 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsMember] ([nodeId] INTEGER NOT NULL,
+[Email] NVARCHAR(1000) NOT NULL CONSTRAINT [DF_cmsMember_Email] DEFAULT (''''),
+[LoginName] NVARCHAR(1000) NOT NULL CONSTRAINT [DF_cmsMember_LoginName] DEFAULT (''''),
+[Password] NVARCHAR(1000) NOT NULL CONSTRAINT [DF_cmsMember_Password] DEFAULT (''''))
+2013-01-22 10:03:40,779 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsMember] ADD CONSTRAINT [PK_cmsMember] PRIMARY KEY ([nodeId])
+2013-01-22 10:03:40,779 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsMember
+2013-01-22 10:03:40,779 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsMember
+2013-01-22 10:03:40,780 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsMember] ADD CONSTRAINT [FK_cmsMember_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,782 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsMember] ADD CONSTRAINT [FK_cmsMember_cmsContent_nodeId] FOREIGN KEY ([nodeId]) REFERENCES [cmsContent] ([nodeId])
+2013-01-22 10:03:40,782 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsMember' was created
+2013-01-22 10:03:40,784 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsMember2MemberGroup] ([Member] INTEGER NOT NULL,
+[MemberGroup] INTEGER NOT NULL)
+2013-01-22 10:03:40,784 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsMember2MemberGroup] ADD CONSTRAINT [PK_cmsMember2MemberGroup] PRIMARY KEY ([Member], [MemberGroup])
+2013-01-22 10:03:40,784 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsMember2MemberGroup
+2013-01-22 10:03:40,784 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsMember2MemberGroup
+2013-01-22 10:03:40,784 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsMember2MemberGroup] ADD CONSTRAINT [FK_cmsMember2MemberGroup_cmsMember_nodeId] FOREIGN KEY ([Member]) REFERENCES [cmsMember] ([nodeId])
+2013-01-22 10:03:40,785 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsMember2MemberGroup] ADD CONSTRAINT [FK_cmsMember2MemberGroup_umbracoNode_id] FOREIGN KEY ([MemberGroup]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,785 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsMember2MemberGroup' was created
+2013-01-22 10:03:40,787 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsContentXml] ([nodeId] INTEGER NOT NULL,
+[xml] NTEXT NOT NULL)
+2013-01-22 10:03:40,788 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsContentXml] ADD CONSTRAINT [PK_cmsContentXml] PRIMARY KEY ([nodeId])
+2013-01-22 10:03:40,788 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsContentXml
+2013-01-22 10:03:40,788 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsContentXml
+2013-01-22 10:03:40,788 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsContentXml] ADD CONSTRAINT [FK_cmsContentXml_cmsContent_nodeId] FOREIGN KEY ([nodeId]) REFERENCES [cmsContent] ([nodeId])
+2013-01-22 10:03:40,789 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsContentXml' was created
+2013-01-22 10:03:40,791 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsPreviewXml] ([nodeId] INTEGER NOT NULL,
+[versionId] UniqueIdentifier NOT NULL,
+[timestamp] DATETIME NOT NULL,
+[xml] NTEXT NOT NULL)
+2013-01-22 10:03:40,791 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsPreviewXml] ADD CONSTRAINT [PK_cmsPreviewXml] PRIMARY KEY ([nodeId], [versionId])
+2013-01-22 10:03:40,791 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsPreviewXml
+2013-01-22 10:03:40,791 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsPreviewXml
+2013-01-22 10:03:40,792 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPreviewXml] ADD CONSTRAINT [FK_cmsPreviewXml_cmsContent_nodeId] FOREIGN KEY ([nodeId]) REFERENCES [cmsContent] ([nodeId])
+2013-01-22 10:03:40,792 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPreviewXml] ADD CONSTRAINT [FK_cmsPreviewXml_cmsContentVersion_VersionId] FOREIGN KEY ([versionId]) REFERENCES [cmsContentVersion] ([VersionId])
+2013-01-22 10:03:40,792 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsPreviewXml' was created
+2013-01-22 10:03:40,794 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsPropertyTypeGroup] ([id] INTEGER NOT NULL IDENTITY(6,1),
+[parentGroupId] INTEGER NULL,
+[contenttypeNodeId] INTEGER NOT NULL,
+[text] NVARCHAR(255) NOT NULL,
+[sortorder] INTEGER NOT NULL)
+2013-01-22 10:03:40,795 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsPropertyTypeGroup] ADD CONSTRAINT [PK_cmsPropertyTypeGroup] PRIMARY KEY ([id])
+2013-01-22 10:03:40,795 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsPropertyTypeGroup
+2013-01-22 10:03:40,796 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsPropertyTypeGroup
+2013-01-22 10:03:40,797 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPropertyTypeGroup] ADD CONSTRAINT [FK_cmsPropertyTypeGroup_cmsPropertyTypeGroup_id] FOREIGN KEY ([parentGroupId]) REFERENCES [cmsPropertyTypeGroup] ([id])
+2013-01-22 10:03:40,798 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPropertyTypeGroup] ADD CONSTRAINT [FK_cmsPropertyTypeGroup_cmsContentType_nodeId] FOREIGN KEY ([contenttypeNodeId]) REFERENCES [cmsContentType] ([nodeId])
+2013-01-22 10:03:40,798 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsPropertyTypeGroup' was created
+2013-01-22 10:03:40,801 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsPropertyType] ([id] INTEGER NOT NULL IDENTITY(28,1),
+[dataTypeId] INTEGER NOT NULL,
+[contentTypeId] INTEGER NOT NULL,
+[propertyTypeGroupId] INTEGER NULL,
+[Alias] NVARCHAR(255) NOT NULL,
+[Name] NVARCHAR(255) NULL,
+[helpText] NVARCHAR(1000) NULL,
+[sortOrder] INTEGER NOT NULL CONSTRAINT [DF_cmsPropertyType_sortOrder] DEFAULT ('0'),
+[mandatory] BIT NOT NULL CONSTRAINT [DF_cmsPropertyType_mandatory] DEFAULT ('0'),
+[validationRegExp] NVARCHAR(255) NULL,
+[Description] NVARCHAR(2000) NULL)
+2013-01-22 10:03:40,801 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsPropertyType] ADD CONSTRAINT [PK_cmsPropertyType] PRIMARY KEY ([id])
+2013-01-22 10:03:40,801 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsPropertyType
+2013-01-22 10:03:40,806 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsPropertyType
+2013-01-22 10:03:40,807 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPropertyType] ADD CONSTRAINT [FK_cmsPropertyType_cmsDataType_nodeId] FOREIGN KEY ([dataTypeId]) REFERENCES [cmsDataType] ([nodeId])
+2013-01-22 10:03:40,807 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPropertyType] ADD CONSTRAINT [FK_cmsPropertyType_cmsContentType_nodeId] FOREIGN KEY ([contentTypeId]) REFERENCES [cmsContentType] ([nodeId])
+2013-01-22 10:03:40,808 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPropertyType] ADD CONSTRAINT [FK_cmsPropertyType_cmsPropertyTypeGroup_id] FOREIGN KEY ([propertyTypeGroupId]) REFERENCES [cmsPropertyTypeGroup] ([id])
+2013-01-22 10:03:40,808 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsPropertyType' was created
+2013-01-22 10:03:40,810 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsPropertyData] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[contentNodeId] INTEGER NOT NULL,
+[versionId] UniqueIdentifier NULL,
+[propertytypeid] INTEGER NOT NULL,
+[dataInt] INTEGER NULL,
+[dataDate] DATETIME NULL,
+[dataNvarchar] NVARCHAR(500) NULL,
+[dataNtext] NTEXT NULL)
+2013-01-22 10:03:40,810 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsPropertyData] ADD CONSTRAINT [PK_cmsPropertyData] PRIMARY KEY ([id])
+2013-01-22 10:03:40,810 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsPropertyData
+2013-01-22 10:03:40,810 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsPropertyData
+2013-01-22 10:03:40,811 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPropertyData] ADD CONSTRAINT [FK_cmsPropertyData_umbracoNode_id] FOREIGN KEY ([contentNodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,811 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsPropertyData] ADD CONSTRAINT [FK_cmsPropertyData_cmsPropertyType_id] FOREIGN KEY ([propertytypeid]) REFERENCES [cmsPropertyType] ([id])
+2013-01-22 10:03:40,811 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_cmsPropertyData] ON [cmsPropertyData] ([id])
+2013-01-22 10:03:40,812 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_cmsPropertyData_1] ON [cmsPropertyData] ([contentNodeId])
+2013-01-22 10:03:40,813 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_cmsPropertyData_2] ON [cmsPropertyData] ([versionId])
+2013-01-22 10:03:40,814 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_cmsPropertyData_3] ON [cmsPropertyData] ([propertytypeid])
+2013-01-22 10:03:40,815 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsPropertyData' was created
+2013-01-22 10:03:40,817 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoRelationType] ([id] INTEGER NOT NULL IDENTITY(2,1),
+[dual] BIT NOT NULL,
+[parentObjectType] UniqueIdentifier NOT NULL,
+[childObjectType] UniqueIdentifier NOT NULL,
+[name] NVARCHAR(255) NOT NULL,
+[alias] NVARCHAR(100) NULL)
+2013-01-22 10:03:40,817 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoRelationType] ADD CONSTRAINT [PK_umbracoRelationType] PRIMARY KEY ([id])
+2013-01-22 10:03:40,817 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoRelationType
+2013-01-22 10:03:40,818 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoRelationType
+2013-01-22 10:03:40,818 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoRelationType' was created
+2013-01-22 10:03:40,820 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoRelation] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[parentId] INTEGER NOT NULL,
+[childId] INTEGER NOT NULL,
+[relType] INTEGER NOT NULL,
+[datetime] DATETIME NOT NULL CONSTRAINT [DF_umbracoRelation_datetime] DEFAULT (getdate()),
+[comment] NVARCHAR(1000) NOT NULL)
+2013-01-22 10:03:40,821 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoRelation] ADD CONSTRAINT [PK_umbracoRelation] PRIMARY KEY ([id])
+2013-01-22 10:03:40,821 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoRelation
+2013-01-22 10:03:40,821 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoRelation
+2013-01-22 10:03:40,821 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoRelation] ADD CONSTRAINT [FK_umbracoRelation_umbracoNode] FOREIGN KEY ([parentId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,822 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoRelation] ADD CONSTRAINT [FK_umbracoRelation_umbracoNode1] FOREIGN KEY ([childId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,822 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoRelation] ADD CONSTRAINT [FK_umbracoRelation_umbracoRelationType_id] FOREIGN KEY ([relType]) REFERENCES [umbracoRelationType] ([id])
+2013-01-22 10:03:40,822 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoRelation' was created
+2013-01-22 10:03:40,824 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsStylesheet] ([nodeId] INTEGER NOT NULL,
+[filename] NVARCHAR(100) NOT NULL,
+[content] NTEXT NULL)
+2013-01-22 10:03:40,824 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsStylesheet] ADD CONSTRAINT [PK_cmsStylesheet] PRIMARY KEY ([nodeId])
+2013-01-22 10:03:40,824 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsStylesheet
+2013-01-22 10:03:40,824 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsStylesheet
+2013-01-22 10:03:40,826 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsStylesheet] ADD CONSTRAINT [FK_cmsStylesheet_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,826 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsStylesheet' was created
+2013-01-22 10:03:40,828 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsStylesheetProperty] ([nodeId] INTEGER NOT NULL,
+[stylesheetPropertyEditor] BIT NULL,
+[stylesheetPropertyAlias] NVARCHAR(50) NULL,
+[stylesheetPropertyValue] NVARCHAR(400) NULL)
+2013-01-22 10:03:40,828 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsStylesheetProperty] ADD CONSTRAINT [PK_cmsStylesheetProperty] PRIMARY KEY ([nodeId])
+2013-01-22 10:03:40,828 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsStylesheetProperty
+2013-01-22 10:03:40,828 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsStylesheetProperty
+2013-01-22 10:03:40,828 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsStylesheetProperty' was created
+2013-01-22 10:03:40,830 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsTags] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[tag] NVARCHAR(200) NULL,
+[ParentId] INTEGER NULL,
+[group] NVARCHAR(100) NULL)
+2013-01-22 10:03:40,831 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsTags] ADD CONSTRAINT [PK_cmsTags] PRIMARY KEY ([id])
+2013-01-22 10:03:40,831 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsTags
+2013-01-22 10:03:40,831 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsTags
+2013-01-22 10:03:40,831 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsTags' was created
+2013-01-22 10:03:40,833 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsTagRelationship] ([nodeId] INTEGER NOT NULL,
+[tagId] INTEGER NOT NULL)
+2013-01-22 10:03:40,833 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsTagRelationship] ADD CONSTRAINT [PK_cmsTagRelationship] PRIMARY KEY ([nodeId], [tagId])
+2013-01-22 10:03:40,833 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsTagRelationship
+2013-01-22 10:03:40,833 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsTagRelationship
+2013-01-22 10:03:40,834 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsTagRelationship] ADD CONSTRAINT [FK_cmsTagRelationship_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,834 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsTagRelationship] ADD CONSTRAINT [FK_cmsTagRelationship_cmsTags_id] FOREIGN KEY ([tagId]) REFERENCES [cmsTags] ([id])
+2013-01-22 10:03:40,834 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsTagRelationship' was created
+2013-01-22 10:03:40,836 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoUserLogins] ([contextID] UniqueIdentifier NOT NULL,
+[userID] INTEGER NOT NULL,
+[timeout] BIGINT NOT NULL)
+2013-01-22 10:03:40,836 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoUserLogins
+2013-01-22 10:03:40,836 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoUserLogins
+2013-01-22 10:03:40,836 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [umbracoUserLogins_Index] ON [umbracoUserLogins] ([contextID])
+2013-01-22 10:03:40,836 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoUserLogins' was created
+2013-01-22 10:03:40,839 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoUserType] ([id] INTEGER NOT NULL IDENTITY(5,1),
+[userTypeAlias] NVARCHAR(50) NULL,
+[userTypeName] NVARCHAR(255) NOT NULL,
+[userTypeDefaultPermissions] NVARCHAR(50) NULL)
+2013-01-22 10:03:40,839 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoUserType] ADD CONSTRAINT [PK_umbracoUserType] PRIMARY KEY ([id])
+2013-01-22 10:03:40,839 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoUserType
+2013-01-22 10:03:40,841 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoUserType
+2013-01-22 10:03:40,841 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoUserType' was created
+2013-01-22 10:03:40,845 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoUser] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[userDisabled] BIT NOT NULL CONSTRAINT [DF_umbracoUser_userDisabled] DEFAULT ('0'),
+[userNoConsole] BIT NOT NULL CONSTRAINT [DF_umbracoUser_userNoConsole] DEFAULT ('0'),
+[userType] INTEGER NOT NULL,
+[startStructureID] INTEGER NOT NULL,
+[startMediaID] INTEGER NULL,
+[userName] NVARCHAR(255) NOT NULL,
+[userLogin] NVARCHAR(125) NOT NULL,
+[userPassword] NVARCHAR(125) NOT NULL,
+[userEmail] NVARCHAR(255) NOT NULL,
+[userDefaultPermissions] NVARCHAR(50) NULL,
+[userLanguage] NVARCHAR(10) NULL,
+[defaultToLiveEditing] BIT NOT NULL CONSTRAINT [DF_umbracoUser_defaultToLiveEditing] DEFAULT ('0'))
+2013-01-22 10:03:40,845 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoUser] ADD CONSTRAINT [PK_user] PRIMARY KEY ([id])
+2013-01-22 10:03:40,845 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoUser
+2013-01-22 10:03:40,847 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoUser
+2013-01-22 10:03:40,847 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoUser] ADD CONSTRAINT [FK_umbracoUser_umbracoUserType_id] FOREIGN KEY ([userType]) REFERENCES [umbracoUserType] ([id])
+2013-01-22 10:03:40,848 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_umbracoUser_userLogin] ON [umbracoUser] ([userLogin])
+2013-01-22 10:03:40,848 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoUser' was created
+2013-01-22 10:03:40,850 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsTaskType] ([id] INTEGER NOT NULL IDENTITY(1,1),
+[alias] NVARCHAR(255) NOT NULL)
+2013-01-22 10:03:40,851 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsTaskType] ADD CONSTRAINT [PK_cmsTaskType] PRIMARY KEY ([id])
+2013-01-22 10:03:40,851 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsTaskType
+2013-01-22 10:03:40,851 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsTaskType
+2013-01-22 10:03:40,852 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Index sql -1:
+ CREATE NONCLUSTERED INDEX [IX_cmsTaskType_alias] ON [cmsTaskType] ([alias])
+2013-01-22 10:03:40,852 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsTaskType' was created
+2013-01-22 10:03:40,854 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsTask] ([closed] BIT NOT NULL CONSTRAINT [DF_cmsTask_closed] DEFAULT ('0'),
+[id] INTEGER NOT NULL IDENTITY(1,1),
+[taskTypeId] INTEGER NOT NULL,
+[nodeId] INTEGER NOT NULL,
+[parentUserId] INTEGER NOT NULL,
+[userId] INTEGER NOT NULL,
+[DateTime] DATETIME NOT NULL CONSTRAINT [DF_cmsTask_DateTime] DEFAULT (getdate()),
+[Comment] NVARCHAR(500) NULL)
+2013-01-22 10:03:40,855 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsTask] ADD CONSTRAINT [PK_cmsTask] PRIMARY KEY ([id])
+2013-01-22 10:03:40,855 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsTask
+2013-01-22 10:03:40,855 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsTask
+2013-01-22 10:03:40,855 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsTask] ADD CONSTRAINT [FK_cmsTask_cmsTaskType_id] FOREIGN KEY ([taskTypeId]) REFERENCES [cmsTaskType] ([id])
+2013-01-22 10:03:40,855 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsTask] ADD CONSTRAINT [FK_cmsTask_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,856 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsTask] ADD CONSTRAINT [FK_cmsTask_umbracoUser] FOREIGN KEY ([parentUserId]) REFERENCES [umbracoUser] ([id])
+2013-01-22 10:03:40,856 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsTask] ADD CONSTRAINT [FK_cmsTask_umbracoUser1] FOREIGN KEY ([userId]) REFERENCES [umbracoUser] ([id])
+2013-01-22 10:03:40,856 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsTask' was created
+2013-01-22 10:03:40,858 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsContentType2ContentType] ([parentContentTypeId] INTEGER NOT NULL,
+[childContentTypeId] INTEGER NOT NULL)
+2013-01-22 10:03:40,858 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsContentType2ContentType] ADD CONSTRAINT [PK_cmsContentType2ContentType] PRIMARY KEY ([parentContentTypeId], [childContentTypeId])
+2013-01-22 10:03:40,858 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsContentType2ContentType
+2013-01-22 10:03:40,858 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsContentType2ContentType
+2013-01-22 10:03:40,858 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsContentType2ContentType] ADD CONSTRAINT [FK_cmsContentType2ContentType_umbracoNode_parent] FOREIGN KEY ([parentContentTypeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,859 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsContentType2ContentType] ADD CONSTRAINT [FK_cmsContentType2ContentType_umbracoNode_child] FOREIGN KEY ([childContentTypeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,859 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsContentType2ContentType' was created
+2013-01-22 10:03:40,861 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [cmsContentTypeAllowedContentType] ([Id] INTEGER NOT NULL,
+[AllowedId] INTEGER NOT NULL,
+[SortOrder] INTEGER NOT NULL CONSTRAINT df_cmsContentTypeAllowedContentType_sortOrder DEFAULT ('0'))
+2013-01-22 10:03:40,862 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [cmsContentTypeAllowedContentType] ADD CONSTRAINT [PK_cmsContentTypeAllowedContentType] PRIMARY KEY ([Id], [AllowedId])
+2013-01-22 10:03:40,862 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table cmsContentTypeAllowedContentType
+2013-01-22 10:03:40,863 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table cmsContentTypeAllowedContentType
+2013-01-22 10:03:40,863 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsContentTypeAllowedContentType] ADD CONSTRAINT [FK_cmsContentTypeAllowedContentType_cmsContentType] FOREIGN KEY ([Id]) REFERENCES [cmsContentType] ([nodeId])
+2013-01-22 10:03:40,864 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [cmsContentTypeAllowedContentType] ADD CONSTRAINT [FK_cmsContentTypeAllowedContentType_cmsContentType1] FOREIGN KEY ([AllowedId]) REFERENCES [cmsContentType] ([nodeId])
+2013-01-22 10:03:40,864 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'cmsContentTypeAllowedContentType' was created
+2013-01-22 10:03:40,866 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoUser2app] ([user] INTEGER NOT NULL,
+[app] NVARCHAR(50) NOT NULL)
+2013-01-22 10:03:40,866 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoUser2app] ADD CONSTRAINT [PK_user2app] PRIMARY KEY ([user], [app])
+2013-01-22 10:03:40,866 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoUser2app
+2013-01-22 10:03:40,868 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoUser2app
+2013-01-22 10:03:40,869 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoUser2app] ADD CONSTRAINT [FK_umbracoUser2app_umbracoUser_id] FOREIGN KEY ([user]) REFERENCES [umbracoUser] ([id])
+2013-01-22 10:03:40,869 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoUser2app' was created
+2013-01-22 10:03:40,871 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoUser2NodeNotify] ([userId] INTEGER NOT NULL,
+[nodeId] INTEGER NOT NULL,
+[action] NCHAR(1) NOT NULL)
+2013-01-22 10:03:40,872 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoUser2NodeNotify] ADD CONSTRAINT [PK_umbracoUser2NodeNotify] PRIMARY KEY ([userId], [nodeId], [action])
+2013-01-22 10:03:40,872 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoUser2NodeNotify
+2013-01-22 10:03:40,872 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoUser2NodeNotify
+2013-01-22 10:03:40,872 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoUser2NodeNotify] ADD CONSTRAINT [FK_umbracoUser2NodeNotify_umbracoUser_id] FOREIGN KEY ([userId]) REFERENCES [umbracoUser] ([id])
+2013-01-22 10:03:40,873 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoUser2NodeNotify] ADD CONSTRAINT [FK_umbracoUser2NodeNotify_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,873 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoUser2NodeNotify' was created
+2013-01-22 10:03:40,875 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Table sql -1:
+ CREATE TABLE [umbracoUser2NodePermission] ([userId] INTEGER NOT NULL,
+[nodeId] INTEGER NOT NULL,
+[permission] NVARCHAR(255) NOT NULL)
+2013-01-22 10:03:40,875 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Primary Key sql -1:
+ ALTER TABLE [umbracoUser2NodePermission] ADD CONSTRAINT [PK_umbracoUser2NodePermission] PRIMARY KEY ([userId], [nodeId], [permission])
+2013-01-22 10:03:40,875 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Creating data in table umbracoUser2NodePermission
+2013-01-22 10:03:40,875 [11] INFO  Umbraco.Core.Persistence.Migrations.Initial.BaseDataCreation - [Thread 14] Done creating data in table umbracoUser2NodePermission
+2013-01-22 10:03:40,876 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoUser2NodePermission] ADD CONSTRAINT [FK_umbracoUser2NodePermission_umbracoUser_id] FOREIGN KEY ([userId]) REFERENCES [umbracoUser] ([id])
+2013-01-22 10:03:40,877 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] Create Foreign Key sql -1:
+ ALTER TABLE [umbracoUser2NodePermission] ADD CONSTRAINT [FK_umbracoUser2NodePermission_umbracoNode_id] FOREIGN KEY ([nodeId]) REFERENCES [umbracoNode] ([id])
+2013-01-22 10:03:40,877 [11] INFO  Umbraco.Core.Persistence.Database - [Thread 14] New table 'umbracoUser2NodePermission' was created
+2013-01-22 10:03:41,140 [11] INFO  umbraco.BusinessLogic.Log - [Thread 8] Log scrubbed.  Removed all items older than 2012-11-23 10:03:41
+2013-01-22 10:03:41,141 [11] INFO  Umbraco.Web.UmbracoApplication - [Thread 8] Application shutdown. Reason: ConfigurationChange
+2013-01-22 10:03:41,658 [19] INFO  Umbraco.Core.CoreBootManager - [Thread 16] Umbraco application starting
+2013-01-22 10:03:41,696 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Determining hash of code files on disk
+2013-01-22 10:03:41,701 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Hash determined (took 4ms)
+2013-01-22 10:03:41,713 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 6ms)
+2013-01-22 10:03:41,716 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 2ms)
+2013-01-22 10:03:41,718 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 1ms)
+2013-01-22 10:03:41,720 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 1ms)
+2013-01-22 10:03:41,721 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 1ms)
+2013-01-22 10:03:41,722 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 0ms)
+2013-01-22 10:03:41,722 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2013-01-22 10:03:41,724 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 0ms)
+2013-01-22 10:03:41,737 [19] INFO  umbraco.content - [Thread 16] Loading content from database...
+2013-01-22 10:03:41,876 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2013-01-22 10:03:41,876 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2013-01-22 10:03:41,878 [19] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 1ms)
+2013-01-22 10:03:42,068 [19] INFO  Umbraco.Core.ApplicationContext - [Thread 16] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:42,069 [19] INFO  Umbraco.Core.ApplicationContext - [Thread 16] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:42,078 [19] INFO  umbraco.BusinessLogic.Log - [Thread 9] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 10:03:42,080 [19] INFO  Umbraco.Core.CoreBootManager - [Thread 16] Umbraco application startup complete (took 419ms)
+2013-01-22 10:03:54,132 [19] INFO  umbraco.BasePages.BasePage - [Thread 14] User Administrator (Id: 0) logged in
+2013-01-22 10:03:57,198 [19] INFO  Umbraco.Core.ApplicationContext - [Thread 8] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:57,493 [19] INFO  Umbraco.Core.ApplicationContext - [Thread 7] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:57,529 [19] INFO  Umbraco.Core.ApplicationContext - [Thread 8] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:57,787 [19] INFO  umbraco.BusinessLogic.Log - [Thread 14] Log scrubbed.  Removed all items older than 2012-11-23 10:03:57
+2013-01-22 10:03:57,789 [19] INFO  Umbraco.Web.UmbracoApplication - [Thread 14] Application shutdown. Reason: ConfigurationChange
+2013-01-22 10:03:58,627 [6] INFO  Umbraco.Core.CoreBootManager - [Thread 22] Umbraco application starting
+2013-01-22 10:03:58,670 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Determining hash of code files on disk
+2013-01-22 10:03:58,674 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Hash determined (took 4ms)
+2013-01-22 10:03:58,675 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 1ms)
+2013-01-22 10:03:58,678 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 2ms)
+2013-01-22 10:03:58,680 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 1ms)
+2013-01-22 10:03:58,682 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 1ms)
+2013-01-22 10:03:58,684 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 2ms)
+2013-01-22 10:03:58,684 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 0ms)
+2013-01-22 10:03:58,685 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2013-01-22 10:03:58,685 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 0ms)
+2013-01-22 10:03:58,687 [6] INFO  umbraco.content - [Thread 22] Loading content from disk cache...
+2013-01-22 10:03:58,690 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2013-01-22 10:03:58,691 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 1ms)
+2013-01-22 10:03:58,697 [6] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 1ms)
+2013-01-22 10:03:58,830 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 22] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:58,831 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 22] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:58,845 [6] INFO  Umbraco.Core.CoreBootManager - [Thread 22] Umbraco application startup complete (took 217ms)
+2013-01-22 10:03:58,852 [6] INFO  umbraco.BusinessLogic.Log - [Thread 9] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 10:03:58,910 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 14] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:03:58,924 [6] INFO  umbraco.presentation.install.utills.p - [Thread 7] Hitting Page_Load on p.aspx for the requested 'progress' feed
+2013-01-22 10:03:58,924 [6] INFO  umbraco.presentation.install.utills.p - [Thread 8] Hitting Page_Load on p.aspx for the requested 'progress' feed
+2013-01-22 10:03:58,959 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 7] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:04:00,640 [6] INFO  umbraco.cms.businesslogic.web.Document - [Thread 7] New document 1051
+2013-01-22 10:04:00,720 [6] INFO  Umbraco.Core.PluginManager - [Thread 7] Completed resolution of types of umbraco.BusinessLogic.Actions.IActionHandler, found 1 (took 11ms)
+2013-01-22 10:04:00,788 [6] INFO  Umbraco.Core.PluginManager - [Thread 7] Completed resolution of types of umbraco.interfaces.ITree, found 36 (took 4ms)
+2013-01-22 10:04:01,081 [6] INFO  umbraco.cms.businesslogic.web.Document - [Thread 7] New document 1052
+2013-01-22 10:04:01,303 [6] INFO  umbraco.cms.businesslogic.web.Document - [Thread 7] New document 1053
+2013-01-22 10:04:01,506 [6] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 7] Content 'Simple website' with Id '1051' has been published.
+2013-01-22 10:04:01,506 [6] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 7] Content 'Go further' with Id '1052' has been published.
+2013-01-22 10:04:01,506 [6] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 7] Content 'Getting started' with Id '1053' has been published.
+2013-01-22 10:04:01,603 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 7] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:04:01,603 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 7] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:04:01,632 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 9] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:04:01,659 [6] INFO  umbraco.content - [Thread 8] Loading content from database...
+2013-01-22 10:04:08,500 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 7] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:04:08,500 [6] INFO  Umbraco.Core.ApplicationContext - [Thread 7] CurrentVersion different from configStatus: '6.0.0',''
+2013-01-22 10:04:08,507 [6] INFO  umbraco.content - [Thread 10] Loading content from database...
+2013-01-22 10:04:08,793 [6] INFO  umbraco.BusinessLogic.Log - [Thread 9] Log scrubbed.  Removed all items older than 2012-11-23 10:04:08
+2013-01-22 10:04:08,794 [6] INFO  Umbraco.Web.UmbracoApplication - [Thread 9] Application shutdown. Reason: ConfigurationChange
+2013-01-22 10:04:09,328 [18] INFO  Umbraco.Core.CoreBootManager - [Thread 16] Umbraco application starting
+2013-01-22 10:04:09,360 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Determining hash of code files on disk
+2013-01-22 10:04:09,364 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Hash determined (took 4ms)
+2013-01-22 10:04:09,366 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 1ms)
+2013-01-22 10:04:09,370 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 3ms)
+2013-01-22 10:04:09,373 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 2ms)
+2013-01-22 10:04:09,374 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 1ms)
+2013-01-22 10:04:09,377 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 2ms)
+2013-01-22 10:04:09,377 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 0ms)
+2013-01-22 10:04:09,378 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 0ms)
+2013-01-22 10:04:09,378 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 0ms)
+2013-01-22 10:04:09,380 [18] INFO  umbraco.content - [Thread 16] Loading content from disk cache...
+2013-01-22 10:04:09,383 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 0ms)
+2013-01-22 10:04:09,383 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 0ms)
+2013-01-22 10:04:09,387 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 1ms)
+2013-01-22 10:04:09,537 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 59ms)
+2013-01-22 10:04:09,562 [18] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 4ms)
+2013-01-22 10:04:09,599 [18] INFO  umbraco.BusinessLogic.Log - [Thread 10] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 10:04:09,600 [18] INFO  Umbraco.Core.CoreBootManager - [Thread 16] Umbraco application startup complete (took 271ms)
+2013-01-22 10:04:10,118 [18] INFO  Umbraco.Core.Configuration.ClientDependencyConfiguration - [Thread 9] Updated version number from 1 to 2
+2013-01-22 10:04:10,371 [18] INFO  umbraco.BusinessLogic.Log - [Thread 10] Log scrubbed.  Removed all items older than 2012-11-23 10:04:10
+2013-01-22 10:04:10,372 [18] INFO  Umbraco.Web.UmbracoApplication - [Thread 10] Application shutdown. Reason: ConfigurationChange
+2013-01-22 10:04:11,077 [23] INFO  Umbraco.Core.CoreBootManager - [Thread 16] Umbraco application starting
+2013-01-22 10:04:11,119 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Determining hash of code files on disk
+2013-01-22 10:04:11,124 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Hash determined (took 4ms)
+2013-01-22 10:04:11,197 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 71ms)
+2013-01-22 10:04:11,201 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 3ms)
+2013-01-22 10:04:11,205 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 3ms)
+2013-01-22 10:04:11,209 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 3ms)
+2013-01-22 10:04:11,213 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 3ms)
+2013-01-22 10:04:11,216 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 3ms)
+2013-01-22 10:04:11,220 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 3ms)
+2013-01-22 10:04:11,225 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 4ms)
+2013-01-22 10:04:11,227 [23] INFO  umbraco.content - [Thread 16] Loading content from disk cache...
+2013-01-22 10:04:11,233 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 3ms)
+2013-01-22 10:04:11,235 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 10:04:11,243 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 4ms)
+2013-01-22 10:04:11,340 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 5ms)
+2013-01-22 10:04:11,362 [23] INFO  Umbraco.Core.PluginManager - [Thread 16] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 5ms)
+2013-01-22 10:04:11,387 [23] INFO  umbraco.BusinessLogic.Log - [Thread 8] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 10:04:11,391 [23] INFO  Umbraco.Core.CoreBootManager - [Thread 16] Umbraco application startup complete (took 312ms)
+2013-01-22 10:04:11,447 [23] INFO  umbraco.presentation.install.utills.p - [Thread 9] Hitting Page_Load on p.aspx for the requested 'developervids' feed
+2013-01-22 10:04:11,447 [23] INFO  umbraco.presentation.install.utills.p - [Thread 7] Hitting Page_Load on p.aspx for the requested 'sitebuildervids' feed
+2013-01-22 10:04:14,923 [23] INFO  Umbraco.Core.PluginManager - [Thread 10] Completed resolution of types of umbraco.XsltExtensionAttribute, found 0 (took 9ms)
+2013-01-22 10:04:17,594 [23] INFO  Umbraco.Core.PluginManager - [Thread 10] Completed resolution of types of umbraco.interfaces.ITree, found 36 (took 3ms)
+2013-01-22 10:05:21,283 [23] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 19] Content 'Simple website' with Id '1051' has been published.
+2013-01-22 10:05:21,473 [23] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 19] Content 'Simple website' with Id '1051' has been published.
+2013-01-22 10:05:21,591 [23] INFO  umbraco.content - [Thread 12] Loading content from database...
+2013-01-22 10:05:25,480 [23] ERROR Umbraco.Web.UmbracoApplication - [Thread 7] An unhandled exception occurred
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): An error has occurred because a control with id 'ctl00$ctl00$ctl00$ContentPlaceHolderDefault$ctl20' could not be located or a different control is assigned to the same ID after postback. If the ID is not assigned, explicitly set the ID property of controls that raise postback events to avoid this error.
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2013-01-22 10:05:26,678 [23] ERROR Umbraco.Web.UmbracoApplication - [Thread 9] An unhandled exception occurred
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): An error has occurred because a control with id 'ctl00$ctl00$ctl00$ContentPlaceHolderDefault$ctl20' could not be located or a different control is assigned to the same ID after postback. If the ID is not assigned, explicitly set the ID property of controls that raise postback events to avoid this error.
+   at System.Web.UI.Page.ProcessPostData(NameValueCollection postData, Boolean fBeforeLoad)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2013-01-22 10:05:47,437 [23] INFO  Umbraco.Core.PluginManager - [Thread 26] Completed resolution of types of umbraco.BusinessLogic.Actions.IActionHandler, found 1 (took 3ms)
+2013-01-22 10:05:47,438 [23] INFO  Umbraco.Core.PluginManager - [Thread 26] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 0ms)
+2013-01-22 10:27:38,651 [23] INFO  umbraco.cms.businesslogic.web.Document - [Thread 52] New document 1060
+2013-01-22 10:27:46,350 [23] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 53] Content 'Super Deluxe Store' with Id '1060' has been published.
+2013-01-22 10:27:46,380 [23] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 53] Couldn't find any page with nodeId=0. This is most likely caused by the page not being published.
+2013-01-22 10:27:46,380 [23] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 53] Couldn't find any page with nodeId=0. This is most likely caused by the page not being published.
+2013-01-22 10:27:46,386 [23] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 53] Error adding node 1051 to SiteMapProvider in loadNodes()
+System.InvalidOperationException: Multiple nodes with the same URL '/' were found. XmlSiteMapProvider requires that sitemap nodes have unique URLs.
+   at System.Web.StaticSiteMapProvider.AddNode(SiteMapNode node, SiteMapNode parentNode)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.loadNodes(String parentId, SiteMapNode parentNode)
+2013-01-22 10:27:46,386 [23] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 53] Couldn't find any page with nodeId=0. This is most likely caused by the page not being published.
+2013-01-22 10:28:19,327 [23] INFO  umbraco.cms.businesslogic.web.Document - [Thread 7] New document 1061
+2013-01-22 10:28:23,360 [23] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 53] Content 'Add-ons' with Id '1061' has been published.
+2013-01-22 10:28:23,402 [23] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 53] Couldn't find any page with nodeId=0. This is most likely caused by the page not being published.
+2013-01-22 10:28:23,402 [23] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 53] Couldn't find any page with nodeId=0. This is most likely caused by the page not being published.
+2013-01-22 10:28:23,402 [23] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 53] Couldn't find any page with nodeId=0. This is most likely caused by the page not being published.
+2013-01-22 10:28:37,388 [23] INFO  umbraco.cms.businesslogic.web.Document - [Thread 53] New document 1062
+2013-01-22 10:29:02,389 [23] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 47] Content 'Umbraco Pro' with Id '1062' has been published.
+2013-01-22 10:29:02,419 [23] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 47] Error adding node with url 'Umbraco Pro' and Id 1062 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 10:29:06,570 [23] INFO  umbraco.cms.businesslogic.web.Document - [Thread 50] New document 1063
+2013-01-22 10:29:10,074 [23] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 53] Content 'Umbraco.TV' with Id '1063' has been published.
+2013-01-22 10:29:10,109 [23] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 53] Error adding node with url 'Umbraco.TV' and Id 1063 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 10:29:15,386 [23] INFO  umbraco.cms.businesslogic.web.Document - [Thread 53] New document 1064
+2013-01-22 10:29:18,720 [23] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 52] Content 'CodeGarden' with Id '1064' has been published.
+2013-01-22 10:29:18,750 [23] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 52] Error adding node with url 'CodeGarden' and Id 1064 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 10:30:13,169 [23] INFO  umbraco.cms.businesslogic.web.Document - [Thread 50] New document 1065
+2013-01-22 10:30:20,137 [23] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 47] Content 'Training' with Id '1065' has been published.
+2013-01-22 10:30:20,162 [23] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 47] Error adding node with url 'Training' and Id 1065 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 10:33:28,156 [23] INFO  umbraco.cms.businesslogic.web.Document - [Thread 58] New document 1066
+2013-01-22 10:33:48,479 [23] INFO  Umbraco.Core.PluginManager - [Thread 56] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 3ms)
+2013-01-22 10:33:48,486 [23] INFO  Umbraco.Core.PluginManager - [Thread 56] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 3ms)
+2013-01-22 10:33:48,503 [23] INFO  umbraco.content - [Thread 50] Loading content from database...
+2013-01-22 10:33:48,514 [23] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.ITree, found 36 (took 0ms)
+2013-01-22 10:33:48,515 [23] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.BusinessLogic.Actions.IActionHandler, found 1 (took 0ms)
+2013-01-22 10:33:48,662 [23] INFO  Umbraco.Core.PluginManager - [Thread 50] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 0ms)
+2013-01-22 11:45:08,396 [23] INFO  umbraco.BusinessLogic.Log - [Thread 60] Log scrubbed.  Removed all items older than 2012-11-23 11:45:08
+2013-01-22 11:45:08,402 [23] INFO  Umbraco.Web.UmbracoApplication - [Thread 60] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2013-01-22 11:45:18,103 [11] INFO  Umbraco.Core.CoreBootManager - [Thread 1] Umbraco application starting
+2013-01-22 11:45:18,141 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Determining hash of code files on disk
+2013-01-22 11:45:18,146 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Hash determined (took 4ms)
+2013-01-22 11:45:18,220 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 68ms)
+2013-01-22 11:45:18,226 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 4ms)
+2013-01-22 11:45:18,230 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 3ms)
+2013-01-22 11:45:18,234 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 3ms)
+2013-01-22 11:45:18,238 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 3ms)
+2013-01-22 11:45:18,241 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 3ms)
+2013-01-22 11:45:18,246 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 4ms)
+2013-01-22 11:45:18,249 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+2013-01-22 11:45:18,259 [11] INFO  umbraco.content - [Thread 1] Loading content from disk cache...
+2013-01-22 11:45:18,265 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 3ms)
+2013-01-22 11:45:18,269 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 11:45:18,275 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 3ms)
+2013-01-22 11:45:18,389 [11] INFO  umbraco.BusinessLogic.Log - [Thread 64] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 11:45:18,392 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 5ms)
+2013-01-22 11:45:18,415 [11] INFO  Umbraco.Core.PluginManager - [Thread 1] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 3ms)
+2013-01-22 11:45:18,441 [11] INFO  Umbraco.Core.CoreBootManager - [Thread 1] Umbraco application startup complete (took 334ms)
+2013-01-22 11:45:40,287 [11] INFO  Umbraco.Core.PluginManager - [Thread 68] Completed resolution of types of umbraco.BusinessLogic.Actions.IActionHandler, found 1 (took 3ms)
+2013-01-22 11:45:40,288 [11] INFO  Umbraco.Core.PluginManager - [Thread 68] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 0ms)
+2013-01-22 11:45:40,337 [11] INFO  Umbraco.Core.PluginManager - [Thread 68] Completed resolution of types of umbraco.interfaces.ITree, found 36 (took 3ms)
+2013-01-22 11:46:59,109 [11] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 68] Content 'Test product' with Id '1066' has been unpublished.
+2013-01-22 11:47:29,538 [11] INFO  umbraco.BusinessLogic.Log - [Thread 8] Log scrubbed.  Removed all items older than 2012-11-23 11:47:29
+2013-01-22 11:47:29,543 [11] INFO  Umbraco.Web.UmbracoApplication - [Thread 8] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2013-01-22 11:47:35,441 [43] INFO  Umbraco.Core.CoreBootManager - [Thread 55] Umbraco application starting
+2013-01-22 11:47:35,476 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Determining hash of code files on disk
+2013-01-22 11:47:35,481 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Hash determined (took 4ms)
+2013-01-22 11:47:35,554 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 67ms)
+2013-01-22 11:47:35,560 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 5ms)
+2013-01-22 11:47:35,564 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 3ms)
+2013-01-22 11:47:35,567 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 3ms)
+2013-01-22 11:47:35,571 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 3ms)
+2013-01-22 11:47:35,575 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 3ms)
+2013-01-22 11:47:35,578 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 3ms)
+2013-01-22 11:47:35,582 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+2013-01-22 11:47:35,590 [43] INFO  umbraco.content - [Thread 55] Loading content from disk cache...
+2013-01-22 11:47:35,595 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 3ms)
+2013-01-22 11:47:35,599 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 11:47:35,604 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 3ms)
+2013-01-22 11:47:35,616 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 4ms)
+2013-01-22 11:47:35,667 [43] INFO  Umbraco.Core.PluginManager - [Thread 55] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 4ms)
+2013-01-22 11:47:35,786 [43] INFO  umbraco.BusinessLogic.Log - [Thread 74] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 11:47:35,786 [43] INFO  Umbraco.Core.CoreBootManager - [Thread 55] Umbraco application startup complete (took 343ms)
+2013-01-22 11:49:31,787 [43] INFO  umbraco.BusinessLogic.Log - [Thread 60] Log scrubbed.  Removed all items older than 2012-11-23 11:49:31
+2013-01-22 11:49:31,789 [43] INFO  Umbraco.Web.UmbracoApplication - [Thread 60] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2013-01-22 11:49:36,571 [73] INFO  Umbraco.Core.CoreBootManager - [Thread 9] Umbraco application starting
+2013-01-22 11:49:36,607 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Determining hash of code files on disk
+2013-01-22 11:49:36,612 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Hash determined (took 5ms)
+2013-01-22 11:49:36,685 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 66ms)
+2013-01-22 11:49:36,690 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 3ms)
+2013-01-22 11:49:36,692 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 3ms)
+2013-01-22 11:49:36,695 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 3ms)
+2013-01-22 11:49:36,699 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 3ms)
+2013-01-22 11:49:36,703 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 3ms)
+2013-01-22 11:49:36,706 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 2ms)
+2013-01-22 11:49:36,711 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+2013-01-22 11:49:36,718 [73] INFO  umbraco.content - [Thread 9] Loading content from disk cache...
+2013-01-22 11:49:36,723 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 3ms)
+2013-01-22 11:49:36,727 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 11:49:36,733 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 3ms)
+2013-01-22 11:49:36,829 [73] INFO  umbraco.BusinessLogic.Log - [Thread 41] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 11:49:36,830 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 5ms)
+2013-01-22 11:49:36,853 [73] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 3ms)
+2013-01-22 11:49:36,870 [73] INFO  Umbraco.Core.CoreBootManager - [Thread 9] Umbraco application startup complete (took 296ms)
+2013-01-22 11:50:50,179 [73] INFO  Umbraco.Core.PluginManager - [Thread 41] Completed resolution of types of umbraco.interfaces.ITree, found 36 (took 4ms)
+2013-01-22 11:50:51,183 [73] INFO  Umbraco.Core.PluginManager - [Thread 31] Completed resolution of types of umbraco.BusinessLogic.Actions.IActionHandler, found 1 (took 10ms)
+2013-01-22 11:50:51,285 [73] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 31] Content 'Add-ons' with Id '1061' has been published.
+2013-01-22 11:50:51,360 [73] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 31] Error adding node 1051 to SiteMapProvider in loadNodes()
+System.InvalidOperationException: Multiple nodes with the same URL '/' were found. XmlSiteMapProvider requires that sitemap nodes have unique URLs.
+   at System.Web.StaticSiteMapProvider.AddNode(SiteMapNode node, SiteMapNode parentNode)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.loadNodes(String parentId, SiteMapNode parentNode)
+2013-01-22 11:50:51,608 [73] INFO  Umbraco.Core.PluginManager - [Thread 31] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 0ms)
+2013-01-22 11:50:53,148 [73] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 8] Content 'Umbraco Pro' with Id '1062' has been published.
+2013-01-22 11:50:54,877 [73] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 41] Content 'Umbraco.TV' with Id '1063' has been published.
+2013-01-22 11:50:56,623 [73] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 68] Content 'CodeGarden' with Id '1064' has been published.
+2013-01-22 11:50:58,486 [73] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 31] Content 'Training' with Id '1065' has been published.
+2013-01-22 11:51:34,258 [73] INFO  umbraco.BusinessLogic.Log - [Thread 57] Log scrubbed.  Removed all items older than 2012-11-23 11:51:34
+2013-01-22 11:51:34,263 [73] INFO  Umbraco.Web.UmbracoApplication - [Thread 57] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2013-01-22 11:51:36,692 [44] INFO  Umbraco.Core.CoreBootManager - [Thread 15] Umbraco application starting
+2013-01-22 11:51:36,722 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Determining hash of code files on disk
+2013-01-22 11:51:36,725 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Hash determined (took 3ms)
+2013-01-22 11:51:36,805 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 75ms)
+2013-01-22 11:51:36,809 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 4ms)
+2013-01-22 11:51:36,814 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 3ms)
+2013-01-22 11:51:36,818 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 3ms)
+2013-01-22 11:51:36,822 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 3ms)
+2013-01-22 11:51:36,827 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 3ms)
+2013-01-22 11:51:36,831 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 3ms)
+2013-01-22 11:51:36,835 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+2013-01-22 11:51:36,841 [44] INFO  umbraco.content - [Thread 15] Loading content from disk cache...
+2013-01-22 11:51:36,846 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 3ms)
+2013-01-22 11:51:36,849 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 11:51:36,854 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 3ms)
+2013-01-22 11:51:36,945 [44] INFO  umbraco.BusinessLogic.Log - [Thread 41] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 11:51:36,946 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 7ms)
+2013-01-22 11:51:36,974 [44] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 6ms)
+2013-01-22 11:51:36,989 [44] INFO  Umbraco.Core.CoreBootManager - [Thread 15] Umbraco application startup complete (took 295ms)
+2013-01-22 11:52:11,470 [44] INFO  umbraco.BusinessLogic.Log - [Thread 57] Log scrubbed.  Removed all items older than 2012-11-23 11:52:11
+2013-01-22 11:52:11,473 [44] INFO  Umbraco.Web.UmbracoApplication - [Thread 57] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2013-01-22 11:52:16,571 [52] INFO  Umbraco.Core.CoreBootManager - [Thread 9] Umbraco application starting
+2013-01-22 11:52:16,609 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Determining hash of code files on disk
+2013-01-22 11:52:16,613 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Hash determined (took 3ms)
+2013-01-22 11:52:16,688 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 68ms)
+2013-01-22 11:52:16,693 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 3ms)
+2013-01-22 11:52:16,696 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 3ms)
+2013-01-22 11:52:16,700 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 3ms)
+2013-01-22 11:52:16,703 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 3ms)
+2013-01-22 11:52:16,708 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 4ms)
+2013-01-22 11:52:16,711 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 3ms)
+2013-01-22 11:52:16,715 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+2013-01-22 11:52:16,724 [52] INFO  umbraco.content - [Thread 9] Loading content from disk cache...
+2013-01-22 11:52:16,730 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 4ms)
+2013-01-22 11:52:16,734 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 11:52:16,739 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 3ms)
+2013-01-22 11:52:16,824 [52] INFO  umbraco.BusinessLogic.Log - [Thread 57] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 11:52:16,836 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 5ms)
+2013-01-22 11:52:16,859 [52] INFO  Umbraco.Core.PluginManager - [Thread 9] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 4ms)
+2013-01-22 11:52:16,876 [52] INFO  Umbraco.Core.CoreBootManager - [Thread 9] Umbraco application startup complete (took 303ms)
+2013-01-22 11:53:47,597 [52] INFO  umbraco.BusinessLogic.Log - [Thread 45] Log scrubbed.  Removed all items older than 2012-11-23 11:53:47
+2013-01-22 11:53:47,600 [52] INFO  Umbraco.Web.UmbracoApplication - [Thread 45] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2013-01-22 11:53:53,539 [52] INFO  Umbraco.Core.CoreBootManager - [Thread 15] Umbraco application starting
+2013-01-22 11:53:53,573 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Determining hash of code files on disk
+2013-01-22 11:53:53,577 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Hash determined (took 3ms)
+2013-01-22 11:53:53,649 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 65ms)
+2013-01-22 11:53:53,654 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 3ms)
+2013-01-22 11:53:53,657 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 3ms)
+2013-01-22 11:53:53,661 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 3ms)
+2013-01-22 11:53:53,665 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 3ms)
+2013-01-22 11:53:53,668 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 2ms)
+2013-01-22 11:53:53,671 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 3ms)
+2013-01-22 11:53:53,675 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+2013-01-22 11:53:53,682 [52] INFO  umbraco.content - [Thread 15] Loading content from disk cache...
+2013-01-22 11:53:53,688 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 3ms)
+2013-01-22 11:53:53,691 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 11:53:53,697 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 3ms)
+2013-01-22 11:53:53,710 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 5ms)
+2013-01-22 11:53:53,761 [52] INFO  Umbraco.Core.PluginManager - [Thread 15] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 4ms)
+2013-01-22 11:53:53,872 [52] INFO  umbraco.BusinessLogic.Log - [Thread 8] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 11:53:53,882 [52] INFO  Umbraco.Core.CoreBootManager - [Thread 15] Umbraco application startup complete (took 341ms)
+2013-01-22 11:55:24,368 [52] INFO  Umbraco.Core.PluginManager - [Thread 48] Completed resolution of types of umbraco.interfaces.ITree, found 36 (took 3ms)
+2013-01-22 11:55:24,384 [52] INFO  Umbraco.Core.PluginManager - [Thread 48] Completed resolution of types of umbraco.BusinessLogic.Actions.IActionHandler, found 1 (took 3ms)
+2013-01-22 11:56:01,363 [52] INFO  umbraco.content - [Thread 19] Loading content from database...
+2013-01-22 11:56:23,354 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco Complete' with Id '0' has been published.
+2013-01-22 11:56:23,456 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node 1051 to SiteMapProvider in loadNodes()
+System.InvalidOperationException: Multiple nodes with the same URL '/' were found. XmlSiteMapProvider requires that sitemap nodes have unique URLs.
+   at System.Web.StaticSiteMapProvider.AddNode(SiteMapNode node, SiteMapNode parentNode)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.loadNodes(String parentId, SiteMapNode parentNode)
+2013-01-22 11:56:23,459 [52] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 40] Couldn't find any page with nodeId=1060. This is most likely caused by the page not being published.
+2013-01-22 11:56:23,460 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco Complete' and Id 1067 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:23,492 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco Complete Server License' with Id '0' has been published.
+2013-01-22 11:56:23,526 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco Complete Server License' and Id 1068 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:23,550 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco Pro with 3 month support' with Id '0' has been published.
+2013-01-22 11:56:23,581 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco Pro with 3 month support' and Id 1069 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:23,604 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco Confidence' with Id '0' has been published.
+2013-01-22 11:56:23,667 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco Confidence' and Id 1070 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:23,701 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco Contour' with Id '0' has been published.
+2013-01-22 11:56:23,733 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco Contour' and Id 1071 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:23,756 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Contour extra domain' with Id '0' has been published.
+2013-01-22 11:56:23,788 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Contour extra domain' and Id 1072 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:23,811 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco Courier' with Id '0' has been published.
+2013-01-22 11:56:23,842 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco Courier' and Id 1073 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:23,867 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Courier extra domain' with Id '0' has been published.
+2013-01-22 11:56:23,899 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Courier extra domain' and Id 1074 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:23,944 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco Courier Light' with Id '0' has been published.
+2013-01-22 11:56:23,976 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco Courier Light' and Id 1075 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,004 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco Concierge' with Id '0' has been published.
+2013-01-22 11:56:24,044 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco Concierge' and Id 1076 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,072 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Concierge extra domain' with Id '0' has been published.
+2013-01-22 11:56:24,104 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Concierge extra domain' and Id 1077 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,133 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco Gold Partner Subscription' with Id '0' has been published.
+2013-01-22 11:56:24,168 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco Gold Partner Subscription' and Id 1078 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,207 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Certification Test' with Id '0' has been published.
+2013-01-22 11:56:24,237 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Certification Test' and Id 1079 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,259 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco course level 1 + certification' with Id '0' has been published.
+2013-01-22 11:56:24,291 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco course level 1 + certification' and Id 1080 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,321 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco course level 2 + certification' with Id '0' has been published.
+2013-01-22 11:56:24,351 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco course level 2 + certification' and Id 1081 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,379 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco course level 1 + certification (Benelux)' with Id '0' has been published.
+2013-01-22 11:56:24,412 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco course level 1 + certification (Benelux)' and Id 1082 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,442 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco course level 2 + certification (Benelux)' with Id '0' has been published.
+2013-01-22 11:56:24,476 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco course level 2 + certification (Benelux)' and Id 1083 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,533 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco course level 1 + certification (spain / portugal)' with Id '0' has been published.
+2013-01-22 11:56:24,566 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco course level 1 + certification (spain / portugal)' and Id 1084 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,597 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco course level 2 + certification (spain / portugal)' with Id '0' has been published.
+2013-01-22 11:56:24,635 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco course level 2 + certification (spain / portugal)' and Id 1085 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,664 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Upgrade course' with Id '0' has been published.
+2013-01-22 11:56:24,700 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Upgrade course' and Id 1086 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,729 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Upgrade course BE' with Id '0' has been published.
+2013-01-22 11:56:24,764 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Upgrade course BE' and Id 1087 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,801 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco CodeGarden 07' with Id '0' has been published.
+2013-01-22 11:56:24,833 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco CodeGarden 07' and Id 1088 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,860 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco CodeGarden 08 Early Bid' with Id '0' has been published.
+2013-01-22 11:56:24,891 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco CodeGarden 08 Early Bid' and Id 1089 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,922 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco CodeGarden 08' with Id '0' has been published.
+2013-01-22 11:56:24,957 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco CodeGarden 08' and Id 1090 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:24,986 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 09 - SUPER EARLY BID' with Id '0' has been published.
+2013-01-22 11:56:25,026 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 09 - SUPER EARLY BID' and Id 1091 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,063 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 09 - EARLY BID' with Id '0' has been published.
+2013-01-22 11:56:25,112 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 09 - EARLY BID' and Id 1092 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,144 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 09' with Id '0' has been published.
+2013-01-22 11:56:25,185 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 09' and Id 1093 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,215 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 10 - SUPER EARLY BID' with Id '0' has been published.
+2013-01-22 11:56:25,248 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 10 - SUPER EARLY BID' and Id 1094 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,277 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 10 - EARLY BIRD' with Id '0' has been published.
+2013-01-22 11:56:25,313 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 10 - EARLY BIRD' and Id 1095 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,340 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 10' with Id '0' has been published.
+2013-01-22 11:56:25,379 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 10' and Id 1096 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,412 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 10 - coverage' with Id '0' has been published.
+2013-01-22 11:56:25,447 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 10 - coverage' and Id 1097 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,484 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 11 - SUPER EARLY BID' with Id '0' has been published.
+2013-01-22 11:56:25,525 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 11 - SUPER EARLY BID' and Id 1098 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,550 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 11 - EARLY BIRD' with Id '0' has been published.
+2013-01-22 11:56:25,586 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 11 - EARLY BIRD' and Id 1099 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,614 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 11' with Id '0' has been published.
+2013-01-22 11:56:25,652 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 11' and Id 1100 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,682 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 11 Partner' with Id '0' has been published.
+2013-01-22 11:56:25,716 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 11 Partner' and Id 1101 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,748 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 12 - SUPER EARLY BID' with Id '0' has been published.
+2013-01-22 11:56:25,782 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 12 - SUPER EARLY BID' and Id 1102 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,805 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'Umbraco CodeGarden 13 - SUPER EARLY BID' with Id '0' has been published.
+2013-01-22 11:56:25,838 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'Umbraco CodeGarden 13 - SUPER EARLY BID' and Id 1103 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,876 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco.tv 3 month subscription' with Id '0' has been published.
+2013-01-22 11:56:25,907 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco.tv 3 month subscription' and Id 1104 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,935 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco.tv 6 month subscription' with Id '0' has been published.
+2013-01-22 11:56:25,969 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco.tv 6 month subscription' and Id 1105 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:25,997 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco.tv 12 month subscription' with Id '0' has been published.
+2013-01-22 11:56:26,028 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco.tv 12 month subscription' and Id 1106 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:26,054 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco.tv Business 10 accounts' with Id '0' has been published.
+2013-01-22 11:56:26,086 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco.tv Business 10 accounts' and Id 1107 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:26,114 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco.tv Business 5 accounts' with Id '0' has been published.
+2013-01-22 11:56:26,147 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco.tv Business 5 accounts' and Id 1108 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:26,174 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco.tv monthly subscription' with Id '0' has been published.
+2013-01-22 11:56:26,207 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco.tv monthly subscription' and Id 1109 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:26,231 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 40] Content 'umbraco.tv monthly with 2 month trial' with Id '0' has been published.
+2013-01-22 11:56:26,262 [52] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 40] Error adding node with url 'umbraco.tv monthly with 2 month trial' and Id 1110 to SiteMapProvider
+System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.UpdateNode(Node node)
+2013-01-22 11:56:29,700 [52] INFO  Umbraco.Core.PluginManager - [Thread 39] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 0ms)
+2013-01-22 11:57:16,197 [52] INFO  Umbraco.Core.PluginManager - [Thread 50] Completed resolution of types of umbraco.XsltExtensionAttribute, found 0 (took 7ms)
+2013-01-22 11:57:16,203 [52] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 50] Couldn't find any page with nodeId=1060. This is most likely caused by the page not being published.
+2013-01-22 11:57:25,035 [52] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 40] Couldn't find any page with nodeId=1060. This is most likely caused by the page not being published.
+2013-01-22 11:57:29,303 [52] WARN  Umbraco.Web.Routing.NiceUrlProvider - [Thread 19] Couldn't find any page with nodeId=1060. This is most likely caused by the page not being published.
+2013-01-22 11:57:31,093 [52] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 50] Content 'Super Deluxe Store' with Id '1060' has been published.
+2013-01-22 11:57:32,883 [52] INFO  umbraco.content - [Thread 40] Loading content from database...
+2013-01-22 11:57:32,964 [52] INFO  umbraco.BusinessLogic.Log - [Thread 8] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] (ExternalIndexer)Index is being optimized
+2013-01-22 11:58:11,163 [52] ERROR Umbraco.Web.UmbracoApplication - [Thread 31] An unhandled exception occurred
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Cannot find ContentPlaceHolder 'ContentPlaceHolderDefault' in the master page '/masterpages/umbMaster.master', verify content control's ContentPlaceHolderID attribute in the content page.
+   at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.MasterPage.get_Master()
+   at System.Web.UI.MasterPage.ApplyMasterRecursive(MasterPage master, IList appliedMasterFilePaths)
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2013-01-22 11:58:57,673 [52] INFO  Umbraco.Core.PluginManager - [Thread 66] Completed resolution of types of umbraco.cms.businesslogic.macro.IMacroEngine, found 2 (took 5ms)
+2013-01-22 11:59:17,106 [52] WARN  umbraco.macro - [Thread 8] Error loading MacroEngine script (file: , Type: ''. Exception: System.Web.HttpCompileException (0x80004005): c:\Websites\UmbracoCms.6.0.0-RC\App_Data\TEMP\Razor\inline-7cd680bf54580ed427de1aba366c83ca.cshtml(2): error CS0234: The type or namespace name 'Cms' does not exist in the namespace 'Umbraco' (are you missing an assembly reference?)
+   at umbraco.macro.renderMacro(Hashtable pageElements, Int32 pageId)
+2013-01-22 11:59:30,991 [52] ERROR Umbraco.Web.UmbracoApplication - [Thread 31] An unhandled exception occurred
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Cannot find ContentPlaceHolder 'ContentPlaceHolderDefault' in the master page '/masterpages/umbMaster.master', verify content control's ContentPlaceHolderID attribute in the content page.
+   at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.MasterPage.get_Master()
+   at System.Web.UI.MasterPage.ApplyMasterRecursive(MasterPage master, IList appliedMasterFilePaths)
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2013-01-22 12:02:40,739 [52] ERROR Umbraco.Web.UmbracoApplication - [Thread 36] An unhandled exception occurred
+System.Web.HttpUnhandledException (0x80004005): Exception of type 'System.Web.HttpUnhandledException' was thrown. ---> System.Web.HttpException (0x80004005): Cannot find ContentPlaceHolder 'ContentPlaceHolderDefault' in the master page '/masterpages/umbMaster.master', verify content control's ContentPlaceHolderID attribute in the content page.
+   at System.Web.UI.MasterPage.CreateMaster(TemplateControl owner, HttpContext context, VirtualPath masterPageFile, IDictionary contentTemplateCollection)
+   at System.Web.UI.MasterPage.get_Master()
+   at System.Web.UI.MasterPage.ApplyMasterRecursive(MasterPage master, IList appliedMasterFilePaths)
+   at System.Web.UI.Page.ApplyMasterPage()
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.HandleError(Exception e)
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+   at System.Web.UI.Page.ProcessRequest()
+   at System.Web.UI.Page.ProcessRequestWithNoAssert(HttpContext context)
+   at System.Web.UI.Page.ProcessRequest(HttpContext context)
+   at ASP.default_aspx.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+2013-01-22 13:08:29,265 [52] INFO  umbraco.BusinessLogic.Log - [Thread 72] Log scrubbed.  Removed all items older than 2012-11-23 13:08:29
+2013-01-22 13:08:29,269 [52] INFO  Umbraco.Web.UmbracoApplication - [Thread 72] Application shutdown. Reason: BinDirChangeOrDirectoryRename
+2013-01-22 13:08:37,041 [77] INFO  Umbraco.Core.CoreBootManager - [Thread 22] Umbraco application starting
+2013-01-22 13:08:37,079 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Determining hash of code files on disk
+2013-01-22 13:08:37,084 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Hash determined (took 3ms)
+2013-01-22 13:08:37,157 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.ICacheRefresher, found 5 (took 67ms)
+2013-01-22 13:08:37,162 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IDataType, found 35 (took 3ms)
+2013-01-22 13:08:37,166 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IMacroGuiRendering, found 13 (took 3ms)
+2013-01-22 13:08:37,169 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IPackageAction, found 12 (took 3ms)
+2013-01-22 13:08:37,173 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 3ms)
+2013-01-22 13:08:37,176 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Core.Models.IMacroPropertyType, found 0 (took 3ms)
+2013-01-22 13:08:37,180 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter, found 0 (took 3ms)
+2013-01-22 13:08:37,184 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Web.Mvc.SurfaceController, found 0 (took 3ms)
+2013-01-22 13:08:37,192 [77] INFO  umbraco.content - [Thread 22] Loading content from disk cache...
+2013-01-22 13:08:37,197 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Core.Media.IThumbnailProvider, found 3 (took 3ms)
+2013-01-22 13:08:37,200 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of Umbraco.Core.Media.IImageUrlProvider, found 1 (took 3ms)
+2013-01-22 13:08:37,206 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IApplicationStartupHandler, found 13 (took 3ms)
+2013-01-22 13:08:37,219 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.IApplication, found 7 (took 5ms)
+2013-01-22 13:08:37,279 [77] INFO  Umbraco.Core.PluginManager - [Thread 22] Completed resolution of types of umbraco.interfaces.ITree, found 27 (took 3ms)
+2013-01-22 13:08:37,400 [77] INFO  umbraco.BusinessLogic.Log - [Thread 73] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] Adding examine event handlers for index providers: 3
+2013-01-22 13:08:37,402 [77] INFO  Umbraco.Core.CoreBootManager - [Thread 22] Umbraco application startup complete (took 359ms)
+2013-01-22 13:09:26,515 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco Complete' with Id '1067' has been published.
+2013-01-22 13:09:26,588 [77] INFO  Umbraco.Core.PluginManager - [Thread 74] Completed resolution of types of umbraco.interfaces.ITree, found 36 (took 4ms)
+2013-01-22 13:09:26,659 [77] ERROR umbraco.presentation.nodeFactory.UmbracoSiteMapProvider - [Thread 74] Error adding node 1051 to SiteMapProvider in loadNodes()
+System.InvalidOperationException: Multiple nodes with the same URL '/' were found. XmlSiteMapProvider requires that sitemap nodes have unique URLs.
+   at System.Web.StaticSiteMapProvider.AddNode(SiteMapNode node, SiteMapNode parentNode)
+   at umbraco.presentation.nodeFactory.UmbracoSiteMapProvider.loadNodes(String parentId, SiteMapNode parentNode)
+2013-01-22 13:09:26,705 [77] INFO  Umbraco.Core.PluginManager - [Thread 74] Completed resolution of types of umbraco.BusinessLogic.Actions.IActionHandler, found 1 (took 4ms)
+2013-01-22 13:09:26,765 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco Complete Server License' with Id '1068' has been published.
+2013-01-22 13:09:26,859 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco Pro with 3 month support' with Id '1069' has been published.
+2013-01-22 13:09:26,951 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco Confidence' with Id '1070' has been published.
+2013-01-22 13:09:27,025 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco Contour' with Id '1071' has been published.
+2013-01-22 13:09:27,094 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Contour extra domain' with Id '1072' has been published.
+2013-01-22 13:09:27,172 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco Courier' with Id '1073' has been published.
+2013-01-22 13:09:27,256 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Courier extra domain' with Id '1074' has been published.
+2013-01-22 13:09:27,327 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco Courier Light' with Id '1075' has been published.
+2013-01-22 13:09:27,399 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco Concierge' with Id '1076' has been published.
+2013-01-22 13:09:27,464 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Concierge extra domain' with Id '1077' has been published.
+2013-01-22 13:09:27,528 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco Gold Partner Subscription' with Id '1078' has been published.
+2013-01-22 13:09:27,592 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Certification Test' with Id '1079' has been published.
+2013-01-22 13:09:27,655 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco course level 1 + certification' with Id '1080' has been published.
+2013-01-22 13:09:27,716 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco course level 2 + certification' with Id '1081' has been published.
+2013-01-22 13:09:27,779 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco course level 1 + certification (Benelux)' with Id '1082' has been published.
+2013-01-22 13:09:27,842 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco course level 2 + certification (Benelux)' with Id '1083' has been published.
+2013-01-22 13:09:27,909 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco course level 1 + certification (spain / portugal)' with Id '1084' has been published.
+2013-01-22 13:09:27,979 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco course level 2 + certification (spain / portugal)' with Id '1085' has been published.
+2013-01-22 13:09:28,044 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Upgrade course' with Id '1086' has been published.
+2013-01-22 13:09:28,118 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Upgrade course BE' with Id '1087' has been published.
+2013-01-22 13:09:28,189 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco CodeGarden 07' with Id '1088' has been published.
+2013-01-22 13:09:28,263 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco CodeGarden 08 Early Bid' with Id '1089' has been published.
+2013-01-22 13:09:28,334 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco CodeGarden 08' with Id '1090' has been published.
+2013-01-22 13:09:28,409 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 09 - SUPER EARLY BID' with Id '1091' has been published.
+2013-01-22 13:09:28,478 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 09 - EARLY BID' with Id '1092' has been published.
+2013-01-22 13:09:28,552 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 09' with Id '1093' has been published.
+2013-01-22 13:09:28,620 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 10 - SUPER EARLY BID' with Id '1094' has been published.
+2013-01-22 13:09:28,696 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 10 - EARLY BIRD' with Id '1095' has been published.
+2013-01-22 13:09:28,766 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 10' with Id '1096' has been published.
+2013-01-22 13:09:28,839 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 10 - coverage' with Id '1097' has been published.
+2013-01-22 13:09:28,913 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 11 - SUPER EARLY BID' with Id '1098' has been published.
+2013-01-22 13:09:28,986 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 11 - EARLY BIRD' with Id '1099' has been published.
+2013-01-22 13:09:29,056 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 11' with Id '1100' has been published.
+2013-01-22 13:09:29,127 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 11 Partner' with Id '1101' has been published.
+2013-01-22 13:09:29,196 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 12 - SUPER EARLY BID' with Id '1102' has been published.
+2013-01-22 13:09:29,271 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Umbraco CodeGarden 13 - SUPER EARLY BID' with Id '1103' has been published.
+2013-01-22 13:09:29,346 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco.tv 3 month subscription' with Id '1104' has been published.
+2013-01-22 13:09:29,415 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco.tv 6 month subscription' with Id '1105' has been published.
+2013-01-22 13:09:29,483 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco.tv 12 month subscription' with Id '1106' has been published.
+2013-01-22 13:09:29,552 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco.tv Business 10 accounts' with Id '1107' has been published.
+2013-01-22 13:09:29,625 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco.tv Business 5 accounts' with Id '1108' has been published.
+2013-01-22 13:09:29,695 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco.tv monthly subscription' with Id '1109' has been published.
+2013-01-22 13:09:29,812 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco.tv monthly with 2 month trial' with Id '1110' has been published.
+2013-01-22 13:09:29,879 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'umbraco.tv monthly with 2 month trial' with Id '1110' has been published.
+2013-01-22 13:09:29,986 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 74] Content 'Niels random product' with Id '0' has been published.
+2013-01-22 13:09:33,281 [77] INFO  Umbraco.Core.PluginManager - [Thread 74] Completed resolution of types of umbraco.interfaces.IAction, found 35 (took 0ms)
+2013-01-22 13:10:08,482 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco Complete' with Id '1067' has been published.
+2013-01-22 13:10:08,545 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco Complete Server License' with Id '1068' has been published.
+2013-01-22 13:10:08,677 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco Pro with 3 month support' with Id '1069' has been published.
+2013-01-22 13:10:08,741 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco Confidence' with Id '1070' has been published.
+2013-01-22 13:10:08,806 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco Contour' with Id '1071' has been published.
+2013-01-22 13:10:08,857 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Contour extra domain' with Id '1072' has been published.
+2013-01-22 13:10:08,884 [77] INFO  umbraco.BusinessLogic.Log - [Thread 13] Redirected log call (please use Umbraco.Core.Logging.LogHelper instead of umbraco.BusinessLogic.Log) | Type: Custom | User: 0 | NodeId: -1 | Comment: [UmbracoExamine] (ExternalIndexer)Index is being optimized
+2013-01-22 13:10:08,920 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco Courier' with Id '1073' has been published.
+2013-01-22 13:10:08,971 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Courier extra domain' with Id '1074' has been published.
+2013-01-22 13:10:09,030 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco Courier Light' with Id '1075' has been published.
+2013-01-22 13:10:09,085 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco Concierge' with Id '1076' has been published.
+2013-01-22 13:10:09,145 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Concierge extra domain' with Id '1077' has been published.
+2013-01-22 13:10:09,210 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco Gold Partner Subscription' with Id '1078' has been published.
+2013-01-22 13:10:09,266 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Certification Test' with Id '1079' has been published.
+2013-01-22 13:10:09,324 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco course level 1 + certification' with Id '1080' has been published.
+2013-01-22 13:10:09,379 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco course level 2 + certification' with Id '1081' has been published.
+2013-01-22 13:10:09,433 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco course level 1 + certification (Benelux)' with Id '1082' has been published.
+2013-01-22 13:10:09,494 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco course level 2 + certification (Benelux)' with Id '1083' has been published.
+2013-01-22 13:10:09,548 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco course level 1 + certification (spain / portugal)' with Id '1084' has been published.
+2013-01-22 13:10:09,608 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco course level 2 + certification (spain / portugal)' with Id '1085' has been published.
+2013-01-22 13:10:09,660 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Upgrade course' with Id '1086' has been published.
+2013-01-22 13:10:09,716 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Upgrade course BE' with Id '1087' has been published.
+2013-01-22 13:10:09,774 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco CodeGarden 07' with Id '1088' has been published.
+2013-01-22 13:10:09,833 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco CodeGarden 08 Early Bid' with Id '1089' has been published.
+2013-01-22 13:10:09,897 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco CodeGarden 08' with Id '1090' has been published.
+2013-01-22 13:10:09,962 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 09 - SUPER EARLY BID' with Id '1091' has been published.
+2013-01-22 13:10:10,021 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 09 - EARLY BID' with Id '1092' has been published.
+2013-01-22 13:10:10,080 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 09' with Id '1093' has been published.
+2013-01-22 13:10:10,151 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 10 - SUPER EARLY BID' with Id '1094' has been published.
+2013-01-22 13:10:10,211 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 10 - EARLY BIRD' with Id '1095' has been published.
+2013-01-22 13:10:10,274 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 10' with Id '1096' has been published.
+2013-01-22 13:10:10,334 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 10 - coverage' with Id '1097' has been published.
+2013-01-22 13:10:10,398 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 11 - SUPER EARLY BID' with Id '1098' has been published.
+2013-01-22 13:10:10,480 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 11 - EARLY BIRD' with Id '1099' has been published.
+2013-01-22 13:10:10,542 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 11' with Id '1100' has been published.
+2013-01-22 13:10:10,606 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 11 Partner' with Id '1101' has been published.
+2013-01-22 13:10:10,664 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 12 - SUPER EARLY BID' with Id '1102' has been published.
+2013-01-22 13:10:10,715 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'Umbraco CodeGarden 13 - SUPER EARLY BID' with Id '1103' has been published.
+2013-01-22 13:10:10,775 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco.tv 3 month subscription' with Id '1104' has been published.
+2013-01-22 13:10:10,830 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco.tv 6 month subscription' with Id '1105' has been published.
+2013-01-22 13:10:10,890 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco.tv 12 month subscription' with Id '1106' has been published.
+2013-01-22 13:10:10,956 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco.tv Business 10 accounts' with Id '1107' has been published.
+2013-01-22 13:10:11,018 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco.tv Business 5 accounts' with Id '1108' has been published.
+2013-01-22 13:10:11,077 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco.tv monthly subscription' with Id '1109' has been published.
+2013-01-22 13:10:11,145 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco.tv monthly with 2 month trial' with Id '1110' has been published.
+2013-01-22 13:10:11,202 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 72] Content 'umbraco.tv monthly with 2 month trial' with Id '1110' has been published.
+2013-01-22 13:10:17,387 [77] INFO  Umbraco.Core.Publishing.PublishingStrategy - [Thread 76] Content 'Niels random product' with Id '1112' has been unpublished.

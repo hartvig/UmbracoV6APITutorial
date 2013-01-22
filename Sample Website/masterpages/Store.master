@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Content.master" AutoEventWireup="true" %>
+
+
+<asp:Content ContentPlaceHolderId="content" runat="server">
+
+	Browse our different categories here:
+	
+<umbraco:Macro  runat="server" language="cshtml">
+@inherits umbraco.MacroEngines.DynamicNodeContext
+
+
+@* Ensure that the Current Page has children, where the property umbracoNaviHide is not True *@
+@if (Model.Children.Where("Visible").Any())
+{
+    <ul>            
+        @* For each child page under the root node, where the property umbracoNaviHide is not True *@
+        @foreach (var childPage in Model.Children.Where("Visible"))
+        {
+            <li>
+                <a href="@childPage.Url">@childPage.Name</a>
+            </li>
+        }
+    </ul>
+}
+
+</umbraco:Macro>
+
+	
+	</asp:Content>

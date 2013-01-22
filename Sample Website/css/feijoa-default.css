@@ -1,0 +1,771 @@
+/* Default stylesheet, a worse case scenario if @media queries aren't understood etc. ~~~~*/
+
+/* css properties are grouped in the following order: font/type, display/margin/padding, position, width/height, border, backgrounds etc.
+new lines for these different property groups 
+
+© Tim Clulow 2011, but share and share alike I say.
+*/
+
+body
+{
+    font: normal 110%/1.5 "Segoe UI" , "Verdana" , Arial, Sans-serif;
+    border-top: solid 1px rgb(50,50,50);
+    background: url(feijoa/bodybg.png) repeat-x 0 165px;
+}
+
+#related ul li
+{
+    font: normal 1.4em/1 'Museo300' , arial, serif;
+}
+
+#siteName
+{
+    font: normal 2.5em/1 'Museo700' , arial, serif; letter-spacing: -1px;
+    margin: 5px 0 0px 0;
+    width: 100%; min-height: 40px;
+    -o-text-shadow: 1px 2px 2px rgba(0,0,0,0.8); text-shadow: 1px 2px 2px rgba(0,0,0,0.8);
+}
+
+#topNavigation
+{
+    font: normal 1em/1.2 "Museo700" , Helvetica, arial, serif;
+}
+
+#topNavigation li a
+{
+    text-decoration: none;
+}
+
+#subNavigation
+{
+    font-size: 0.8em; line-height: 1.7em; text-align: left;
+    display: block; float: right;
+    margin: 4px 0 -30px 0; padding-bottom: 33px;
+    height: auto; 
+}
+
+#subNavigation li
+{
+    line-height: 1em;
+    display: inline-block;
+    margin: 0 6px 0 0;
+}
+
+#subNavigation li a
+{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 6px 0 0; padding-left: 12px;
+}
+
+#subNavigation li:first-child a
+{
+    border: 0;
+}
+
+#body h2
+{
+    font-family: 'Museo300' , arial, serif; font-size: 2em;
+    margin: 0.3em 0 12px; padding-bottom: 1px;
+}
+
+#body .post h2
+{
+    padding-right: 30%;
+}
+
+#body h2 a, #top a
+{
+    text-decoration: none;
+}
+
+#comments h3, #tagcloud h3, #sidebar h3
+{
+    font-size: 1.3em; font-family: 'Museo300' , arial, serif;
+}
+
+/* Containers */
+#top
+{
+    display: block; overflow: hidden;
+}
+
+#top, #body
+{
+    width: auto; height: auto;
+    padding: 0.2em 0.75em;
+}
+
+.top, #body, .footer
+{
+    position: relative;
+    margin: auto; padding: 0;
+    width: 940px;
+}
+
+.top
+{
+    min-height: 90px;
+}
+
+/* Site Name & Description */
+#siteName
+{
+    display: block; float: left;
+    margin-top: 4px; margin-left: -2px;
+}
+
+#siteDescription
+{
+    font-weight: normal; font-size: 0.8em;
+    display: block; float: left;
+    margin: -7px 0 0.65em 0; padding: 0 0 0.3em 0.2em;
+    width: 100%;
+    border-left: 0;
+}
+
+.skip-link
+{
+    display: none;
+}
+
+/* Main Navigation Items */
+#topNavigation
+{
+    font-size: 1em;
+    float: left;
+    position: static;
+    margin: 0 0 0.15em -0.3em;
+}
+
+#topNavigation li
+{
+    display: inline-block;
+    margin: 6px 3px 0.3em 3px; padding-bottom: 7px;
+    white-space: nowrap;
+}
+
+
+#topNavigation li a
+{
+    padding: 7px 8px 6px;
+    border-radius: 5px;
+    -o-border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+
+#topNavigation li a:hover, #topNavigation li.current a
+{
+    border-radius: 5px;
+    -o-border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+
+#topNavigation li.current
+{
+    background: url(feijoa/select-marker.png) no-repeat -10px 28%;
+}
+
+#topNavigation li.current a
+{
+    padding: 6px 11px 8px;
+}
+
+/* Content Container */
+#content
+{
+    padding-top: 8px;
+    padding-bottom: 18px;
+}
+
+#content p
+{
+    margin: 2px 0 7px 0;
+}
+
+#content.textpage .post
+{
+    position: static;
+}
+
+.post
+{
+    position: relative;
+}
+
+
+/* Meta Data Styles */
+.entry-meta, .entry-date
+{
+    color: #aaa;
+    font-size: 0.9em;
+}
+
+.entry-meta a, .meta, a.tagweight0, a.tagweight1, a.tagweight2, a.tagweight3, a.tagweight4, a.tagweight5, .frontPage small
+{
+    text-decoration: none; line-height: 1.8em;
+    display: inline;
+    padding: 0px 6px;
+    border-radius: 2px; -moz-border-radius: 2px; -webkit-border-radius: 2px;
+}
+
+.meta
+{
+    display: inline-block;
+}
+
+a.tagweight0, a.tagweight1, a.tagweight2, a.tagweight3, a.tagweight4, a.tagweight5
+{
+    font-size:1em;
+    display: inline-block;
+    margin: 4px 1px;
+}
+
+.entry-date
+{
+    font-size: 10px; text-align: right;
+    display: block; float: right; overflow: hidden;
+    position: absolute; right: 0px; top: 6px;
+    margin: 0;
+    width: 80px; height: 18px;
+}
+
+.entry-date abbr
+{
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+.entry-content ul
+{
+    margin-left: 20px;
+}
+
+.entry-content h3
+{
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+.entry-content h6
+{
+    font-size: 1.25em;
+    font-weight: bold;
+}
+
+.entry-content ul li
+{
+    list-style-type: disc;
+}
+
+.entry-content em
+{
+    display: block;
+    margin: 9px 0 -5px 0;
+}
+
+.vcard
+{
+    margin-bottom: 5px;
+}
+
+.tag-links
+{
+    margin-left: -49px;
+    visibility: hidden;
+}
+
+.tag-links a
+{
+    visibility: visible;
+}
+
+abbr.published:after
+{
+    content: ".";
+    display: block; visibility: hidden;
+    height: 0;
+}
+
+.meta-sep
+{
+    display: inline-block;
+    margin-right: 5px;
+    width: 5px;
+}
+
+.fn
+{
+    font-size: 1.3em;
+}
+
+.fn a
+{
+    text-decoration: none;
+}
+
+.error
+{
+    font-size: 0.8em;
+    padding: 1px 3px;
+}
+
+/* default ordered list */
+ol li
+{
+    list-style-type: decimal;
+}
+
+.hentry
+{
+    padding: 0 0 20px 0;
+}
+
+/* Gallery Styles for Personal Site */
+.umbGallery:after
+{
+    content: ".";
+    display: block; clear: both; visibility: hidden;
+}
+.umbGallery li
+{
+    float: left;
+    margin: 0 14px 0 0; padding: 0 10px 15px 0;
+    width: 110px; min-height: 140px;
+    border-right: 1px dotted #ccc;
+}
+.umbGallery li .name
+{
+    display: block;
+}
+.umbGallery div.photo
+{
+    min-height: 110px;
+}
+
+/* Contact & General Form Styles */
+fieldset
+{
+    width: 300px;
+}
+
+fieldset label
+{
+    display: block;
+}
+
+fieldset input
+{
+    width: 100%;
+}
+
+legend
+{
+    display: none;
+}
+
+.formcontainer
+{
+    margin-top: 9px; padding: 0 9px 9px;
+    
+}
+
+#respond .form-submit input
+{
+    margin-top: 8px;
+}
+
+#respond .form-input input, #respond .form-input textarea, #respond .form-submit input, fieldset input, fieldset textarea
+{
+    font-size: 0.9em;
+    padding: 2px;
+    width: 97%;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+
+#respond .form-submit input, fieldset input[type=submit]
+{
+    padding: 4px 0 4px 0;
+    width: 100%;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+
+/* Comment Styles */
+#commentform
+{
+    margin-top: -4px; padding: 1px 0 4px 0;
+    
+}
+
+#comments, #tagcloud, #sidebar
+{
+    margin: 7px 5px 0 0; padding: 0px 9px 9px 28px;
+}
+
+#comments
+{
+    float: none;
+    position: relative;
+    width: auto;
+}
+
+#comments, #content, .post
+{
+    float: none;
+    position: static;
+    width: auto;
+}
+
+#commentPosted
+{
+    padding: 6px;
+}
+
+#gravatar, .commentlist .photo
+{
+    margin-bottom: 9px;
+    border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;
+}
+
+.commentlist
+{
+    font-size: 0.8em;
+}
+
+#comments h3, #tagcloud h3, #sidebar h3
+{
+    display: block;
+    margin-bottom: 9px; padding: 10px 0 7px 10px; /*-moz-border-radius:0 0 16px 0;*/
+}
+
+li.comment
+{
+    margin-bottom: 5px;
+}
+
+ol.commentlist
+{
+    padding-bottom: 3px;
+}
+
+ol.commentlist li
+{
+    margin: 0 0px 0 0; padding: 8px 10px 0 9px;
+}
+
+ol.commentlist li:last-child
+{
+    border: 0;
+}
+
+ol.commentlist li p
+{
+    font-size: 1.1em;
+}
+
+.commentlist .photo
+{
+    margin: 0 10px 0 0;
+}
+
+.commentlist .photo
+{
+    width: 40px !important; height: 40px !important;
+}
+
+.comment-meta
+{
+    line-height: normal; text-align: right;
+    float: right;
+    margin-top: -48px;
+    width: 50%;
+}
+
+.entry-meta
+{
+    margin-top: 20px; padding-top: 7px;
+}
+
+.entry-content img
+{
+    margin: 2% 4%; padding: 10px;
+}
+
+.image-text
+{
+    display: none; float: right;
+    width: 220px;
+    margin-top: 60px; padding: 10px;
+}
+
+.author .fn
+{
+    font-size: 1em;
+}
+
+small
+{
+    font-size: 0.8em;
+}
+
+.comments-link a
+{
+    white-space: nowrap;
+}
+
+/* Sidebar and headings */
+#archive, #archieve
+{
+    margin-left: -4px;
+}
+
+#archive h3, #archieve h3
+{
+    font-size: 1.2em; font-weight: bold;
+    margin-right: 4px; padding-left: 4px;
+    width: 29.7%;
+}
+
+#archive h4, #archieve h4
+{   
+    margin-bottom: 4px; padding: 2px 4px;
+}
+
+#archive .tab, #archieve .tab
+{
+    float: left; 
+    margin-bottom: 30px;
+    width: 30%;
+}
+
+#archive ul, #archieve ul
+{
+    margin-left: 4px;
+}
+
+#tagcloud
+{
+    float: right;
+}
+
+input.error, #respond .form-input input.error
+{
+    font-size: 1em;
+}
+
+h3.headline, .summaryList h4, .feedList h4
+{
+    font-size: 1.2em;
+    width: 70%;
+}
+
+h3.headline a:link, .summaryList h4 a:link, .feedList h4 a:link
+{
+    text-decoration: none;
+}
+
+h3.headline a:hover, .summaryList h4 a:hover, .feedList h4 a:hover
+{
+    text-decoration: underline;
+}
+
+#content.frontPage h3
+{
+    font-weight: bold; font-size: 0.8em; text-transform: uppercase;
+}
+
+.summaryList li, .feedList li
+{
+    position: relative;
+}
+
+.summaryList li small, .feedList li small
+{
+    position: absolute; top: 0; right: 0;
+}
+
+#respond h3, #tagcloud .alt h3
+{
+    background: none;
+}
+
+#blogroll
+{
+    margin-top: 24px;
+}
+
+#blogroll ul li
+{
+    margin-left: -4px; padding-left: 14px;
+}
+
+#blogroll ul li a
+{
+    text-decoration: none;
+}
+
+#comments h3, #respond h3, #sidebar h3
+{
+    margin-top: 1px;
+}
+
+
+/* Related Articles for Blog pages */
+#related
+{
+    margin-top: 19px;
+}
+
+.p1 + #related, .p1 .entry-date
+{
+    display: none;
+}
+
+#related ul
+{
+    padding: 1px 10px 3px 14px;
+    min-height: 110px;
+}
+
+#related ul:after
+{
+    content: '.';
+    display: block; clear: both; visibility: hidden;
+    height: 0;
+}
+
+#related ul li
+{
+    display: block; float: left;
+    margin: 14px 12px 11px 0; padding: 10px 10px 80px 10px;
+    width: 99px;
+    -moz-transform: rotate(-5deg); -webkit-transform: rotate(-5deg);
+}
+
+#related ul li a
+{
+    text-decoration: none; display: block; overflow: hidden;
+    height: 57px;
+}
+
+.form-label
+{
+    font-size: 0.8em;
+    margin: 8px 0 0;
+    width: 80px;
+}
+
+span.blog
+{
+    display: none;
+}
+
+ul.helper-links
+{
+    padding: 18px 0 0 130px;
+}
+
+ul.helper-links li
+{
+    font-size: 0.8em;
+    display: inline-block;
+}
+
+ul.helper-links li a
+{
+    text-decoration: none;
+    padding: 0 14px 0 7px;
+}
+
+.umbModalBox
+{
+    height: auto !important;
+}
+
+.propertyItemheader
+{
+    width: 220px !important;
+}
+
+/* Footer bits */
+#twitter
+{
+    position: absolute; top: 13px; left: 13px;
+    width: 109px; height: 47px;
+}
+
+#feijoa
+{
+    position: absolute; top: 16px; right: 36px;
+    padding-right: 50px;
+    width: 109px; height: 41px;
+}
+
+#rss
+{
+    position: absolute; top: 19px; left: 60px;
+    padding-right: 50px; width: 109px; height: 41px;
+   
+}
+
+#twitter, #feijoa, #rss
+{
+    text-indent: -999px;
+    overflow: hidden;
+}
+
+/*  
+Sticky Footer Solution
+by Steve Hatcher 
+http://stever.ca
+http://www.cssstickyfooter.com
+*/
+
+html, body
+{
+    height: 99.9%;
+}
+
+#main
+{
+    position: relative;
+    min-height: 99.9%;
+}
+
+#body
+{
+    font-size: 80%;
+    padding: 10px 10px 80px 10px;
+}
+
+/* must be same height as the footer */
+#body p
+{
+    margin: 9px 0 13px;
+}
+
+#footer
+{
+    clear: both;
+    position: relative;
+    margin-top: -71px; /* negative value of footer height */
+    height: 70px;
+}
+
+.footer
+{
+    height: 70px;
+}
+
+/*Opera Fix*/
+body:before
+{
+    /* thanks to Maleika (Kohoutec)*/
+    content: "";
+    float: left;
+    margin-top: -32767px; /* thank you Erik J - negate effect of float*/
+    width: 0;
+    height: 100%;
+}
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

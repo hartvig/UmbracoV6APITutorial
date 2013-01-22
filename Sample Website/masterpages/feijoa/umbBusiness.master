@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/umbMaster.master" AutoEventWireup="true" %>
+<asp:content id="Content1" contentplaceholderid="cp_content" runat="server">
+    <div id="skinHeader" class="clearfix">
+        <h1>
+            don’t panic<br>
+            just yet*
+        </h1>
+        <p>
+            *<br>
+            Most of the time ghosts are friendly and there is really no need to panic.
+            Ghosts are lost souls looking to be released and pass on to whatever 
+            heaven they attend (depending on religion).
+        </p>
+    </div>
+
+    <div id="content" class="frontPage">
+        <umbraco:item id="Item1" runat="server" field="bodyText"></umbraco:item>
+    </div>
+
+    <div id="columns" class="clearfix">
+        <div class="col">
+            <umbraco:macro id="Macro1" numberofitems="3" excerptlength="90" alias="umbBusinessFrontpageNews" runat="server"></umbraco:macro>
+        </div>
+        <div class="col">
+            <umbraco:macro id="Macro2" numberofitems="3" excerptlength="90" alias="umbBusinessFrontpageBlog" runat="server"></umbraco:macro>
+        </div>
+        <div class="col">
+            <h3>Business news</h3>
+            <umbraco:macro id="Macro3" feedurl="http://feeds.reuters.com/reuters/technologyNews" numberofitems="3" excerptlength="90" alias="umbFeedViewer" runat="server"></umbraco:macro>
+        </div>
+         <div class="col">
+            <ul id="socialLinks">
+                <li class="twitter"><a id="twitterLink" href="http://twitter.com/tgeyssens" target="_blank">follow me on twitter</a></li>
+                <li class="facebook"><a id="facebookLink" href="http://somelink.com" target="_blank">be our friend on facebook</a></li>
+            </ul>
+        </div>
+    </div>
+</asp:content>

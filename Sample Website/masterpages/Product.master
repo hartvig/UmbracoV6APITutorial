@@ -1,0 +1,7 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/masterpages/Content.master" AutoEventWireup="true" %>
+
+<asp:Content ContentPlaceHolderId="content" runat="server">
+	<p>
+		Just <umbraco:Item field="priceDKK" runat="server" />,- DKK. <a href="#">Add to Cart (which does nothing)</a>
+	</p>
+</asp:Content>

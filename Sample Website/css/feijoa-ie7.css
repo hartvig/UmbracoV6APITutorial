@@ -1,0 +1,224 @@
+/* corrections for the unco-ordinated and intoxicated */
+body
+{
+background: url(feijoa/bodybg.png) repeat-x 0 72px;
+}
+
+
+#siteName
+{
+font-size: 2.3em;
+width:auto;
+line-height:1.5em;
+        
+}
+
+.top, #body, .footer
+{
+padding: 0 20px;
+}
+
+.top, #top
+{
+        height:113px;
+}
+
+#top
+{
+overflow:hidden;
+}
+
+#top, #body
+{
+padding:0;
+}
+#comments, #tagcloud, #sidebar
+{
+float:right;
+position:relative;
+width:25.5%;
+}
+
+#siteDescription
+{
+margin: 27px 15px 0 15px;
+padding: 0 0 0 13px;
+border:0;
+border-left: 1px solid rgba(255,255,255,0.2);  
+width:auto;
+}
+
+#topNavigation
+{
+float: none;
+clear:both;
+/*position: absolute;
+top:10px;
+right: 20px;*/  
+height:60px; overflow:hidden; 
+margin-top:-9px;
+}
+
+#topNavigation li
+{
+margin: 6px 3px 0 3px;
+padding-bottom: 24px;
+float:left;
+}
+
+#topNavigation li a
+{
+background:transparent;
+padding: 6px 11px 8px;
+border:1px dotted rgb(200,200,200);
+float:left;
+        
+}
+
+#topNavigation li a:hover
+{
+border:1px solid rgba(255,255,255,0.6);
+}
+#topNavigation li.current
+{
+background: url(feijoa/select-marker.png) no-repeat bottom;
+        
+}
+
+#topNavigation li.current a
+{
+padding: 6px 11px 8px;
+border:1px solid rgba(255,255,255,0.6);
+}
+
+
+#subNavigation
+{
+text-align: right;
+margin-top: 23px;
+padding-bottom:0px;
+line-height:normal;
+}
+
+#subNavigation li
+{
+margin:0;
+border:0;
+float:left
+}
+
+#subNavigation li a
+{
+margin: 0 10px;  
+}
+
+
+.post, .bodyText
+{
+width:64%;
+float:left;
+padding-bottom:40px;
+        
+}
+
+span.blog
+{
+display:block;
+left:-15px;
+position:absolute;
+top:12px; left:-15px;
+width:24px;
+height:24px;
+background: url("/css/feijoa/tinyarrow.png") no-repeat scroll 8px 6px #FFFFFF;
+-moz-border-radius:24px;
+-webkit-border-radius:24px;
+box-shadow:1px 1px 3px #CCCCCC;
+-moz-box-shadow:1px 1px 3px #CCCCCC;
+-webkit-box-shadow:1px 1px 3px #CCCCCC;
+behavior: url(/css/feijoa/PIE.htc);   
+}
+
+.entry-date
+{
+margin:-40px 0px 0 0;
+overflow:visible;
+position:static;
+text-align:left;
+font-size:1em;
+width:auto;
+height:auto;       
+}
+
+.entry-date abbr
+{
+position:static;
+z-index:auto;
+}
+
+#content.textpage .entry-date abbr{
+display:none;
+}
+
+#body .post h2
+{
+padding-right:0;
+letter-spacing:-0.5px;
+}
+
+#main
+{
+width:auto;            
+}
+
+.post img
+{
+margin:1px 0 10px 6px;
+}
+
+.column{
+width:49%;
+margin-right:0.5%;
+float:left;
+}
+
+.entry-content h3{
+clear:both; padding-top:26px;
+}
+
+.image-text{
+font-family:'Museo300',arial,serif;
+font-size:1.3em;
+width:200px;
+margin:20px 20px 0 0;
+}
+
+fieldset
+{
+float:none; display:block;
+}
+
+#respond .form-submit input{
+box-shadow: -1px 1px 4px #ccc;
+}
+
+
+ul.helper-links li
+{
+    display: block; float:left;
+}
+
+
+.colour-filter
+{
+    left:0px; 
+}
+
+
+
+
+
+
+
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

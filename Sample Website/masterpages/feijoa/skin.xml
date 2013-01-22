@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Skin>
+  <Name>feijoa</Name>
+  <Author>Tim Clulow</Author>
+  <Version>1.0</Version>
+  <Description><![CDATA[A mobile friendly blog skin for Umbraco]]></Description>
+  <!-- permissions -->
+  <!-- 
+         This determines what document types is allowed to enable the skin on, this enables a UI component 
+         next to the template picker, which allows to set a skin, with a list of skins allowed for this document type
+    -->
+  <AllowedDocumentTypes>umbHomepage</AllowedDocumentTypes>
+  <AllowedRootTemplate>umbHomepage</AllowedRootTemplate>
+  <!-- by default this is empty, is set during the skin configuration-->
+  <SkinPalette>
+  </SkinPalette>
+  <CSS targetfile="feijoa-colour.css">
+    <Variables>
+      <Variable name="gradientOne">#555555</Variable>
+      <Variable name="gradientTwo">#000000</Variable>
+      <Variable name="headerText">#ffffff</Variable>
+      <Variable name="Primary">#3688AF</Variable>
+      <Variable name="Secondary">#89D8D7</Variable>
+      <Variable name="bgImage">/css/feijoa/scratched.png</Variable>
+      <Variable name="shadowOpacity">0.5</Variable>
+    </Variables>
+    <Content>
+
+        #content a, #content a:active, #content a:visited,
+        #subNavigation a, #subNavigation a:active, #subNavigation a:visited,
+        .dark #content a, .dark #content a:active, .dark #content a:visited,
+        .dark #subNavigation a, .dark #subNavigation a:active, .dark #subNavigation a:visited{color: @Primary;}
+        #content a:hover, .dark #content a:hover{color: @Secondary;}
+        #themetype #siteName a{color: @headerText !important;}
+        #themetype #topNavigation li a{color:@headerText !important;}
+
+        #top, #themetype.dark #top, #themetype.light #top{
+        filter:progid:DXImageTransform.Microsoft.gradient( endColorstr=@gradientTwo startColorstr=@gradientOne);
+        -ms-filter:"progid:DXImageTransform.Microsoft.gradient( endColorstr=@gradientTwo startColorstr=@gradientOne)";
+        background-color: @gradientOne;
+        background-image: -moz-linear-gradient(center bottom , @gradientTwo 0%, @gradientOne 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, @gradientTwo), color-stop(0, @gradientOne));}
+
+        .top{background-image:url(@bgImage);background-repeat:no-repeat; }
+        #siteDescription, .light #siteDescription, .dark #siteDescription{color: @Secondary;}
+        #siteDescription, .light #siteDescription{
+        text-shadow: 1px 1px 1px rgba(0,0,0,@shadowOpacity);
+        -moz-text-shadow: 1px 1px 1px rgba(0,0,0,@shadowOpacity);
+        -webkit-text-shadow: 1px 1px 1px rgba(0,0,0,@shadowOpacity);
+        }
+        .dark #siteDescription{}
+
+        #content .entry-meta a, #content .meta,
+        #content a.tagweight0, #content a.tagweight1, #content a.tagweight2,
+        #content a.tagweight3, #content a.tagweight4, #content a.tagweight5, .frontPage small
+        {color: #fff;background: @Primary;opacity:0.3;}
+        a.tagweight0{opacity:0.1;}
+        a.tagweight1{opacity:0.6;}
+        a.tagweight2, a.tagweight3, a.tagweight4{opacity:1;}
+
+        .commentlist .photo{border:2px solid @Primary;}
+
+        #commentPosted{
+        background: @Primary;
+        color: @Secondary;
+        }
+
+        #respond .form-submit input, fieldset input[type=submit]{
+        background: @Primary;
+        filter:progid:DXImageTransform.Microsoft.gradient( endColorstr=@gradientTwo startColorstr=@gradientOne);
+        -ms-filter:"progid:DXImageTransform.Microsoft.gradient( endColorstr=@gradientTwo startColorstr=@gradientOne)";
+        background-image: url(@bgImage);
+        background-image: -moz-linear-gradient(center bottom , @gradientTwo  0%, @gradientOne 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, @gradientTwo), color-stop(0, @gradientOne));
+        border:1px solid @Primary;
+        }
+
+        .entry-content em{color: @Primary;}
+        ul.helper-links li a{color: @Primary;}
+
+        #footer .colour-filter{
+        background: @gradientOne;
+        filter:progid:DXImageTransform.Microsoft.gradient(endColorstr=@gradientOne startColorstr=@gradientTwo);
+        -ms-filter:"progid:DXImageTransform.Microsoft.gradient(endColorstr=@gradientOne startColorstr=@gradientTwo)";
+        background-image: -moz-linear-gradient(center bottom , @gradientOne  0%, @gradientTwo 100%);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(1, @gradientOne), color-stop(0, @gradientTwo));
+        background-repeat:repeat-x;
+        opacity:0.2;}
+
+        #footer .footer{background-image:url(@bgImage);background-repeat:no-repeat;}
+
+        /*business package specific */
+        .frontPage a[href^=http://feeds]{color: @gradientOne !important;}
+
+
+        /* Dark Theme */
+        #themetype.dark{color:#fff; color: rgba(255,255,255, @shadowOpacity);}
+        #themetype.dark #siteName{text-shadow: 1px 1px 1px rgba(255,255,255,@shadowOpacity);}
+        #themetype.dark #topNavigation li a{text-shadow:0px 1px 1px rgba(255,255,255,@shadowOpacity);}
+
+        .dark .entry-date .day{
+        -moz-box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.25);
+        -webkit-box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.5);}
+
+        #themetype.dark #comments h3, #themetype.dark #tagcloud h3, #themetype.dark #respond h3,
+        #themetype.dark #sidebar h3, #themetype.dark #tagcloud .alt h3{
+        text-shadow: 0px 1px 1px rgba(0,0,0,@shadowOpacity);
+        border-bottom: 1px dotted rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.9);}
+
+        .dark #content .entry-meta a, .dark #content .meta,
+        .dark #content a.tagweight0, .dark #content a.tagweight1, .dark #content a.tagweight2,
+        .dark #content a.tagweight3, .dark #content a.tagweight4, .dark #content a.tagweight5, .frontPage small{
+        color: @headerText;
+        background: @Primary;
+        opacity:0.4;}
+
+        #themetype.dark #respond .form-input input:focus, #themetype.dark #respond .form-input textarea:focus{
+        border-color:rgba(255,255,255,@shadowOpacity);}
+        #themetype.dark #respond .form-submit input, #themetype.dark fieldset input[type=submit]{
+        text-shadow:1px 1px 2px rgba(255,255,255,@shadowOpacity);
+        box-shadow: -1px 1px 8px rgba(255,255,255,@shadowOpacity);
+        -moz-box-shadow: -1px 1px 8px rgba(255,255,255,@shadowOpacity);
+        -webkit-box-shadow: -1px 1px 8px rgba(255,255,255,@shadowOpacity);}
+        .dark #topNavigation li a{border: solid 1px rgba(255,255,255,0.12); background: rgba(255,255,255,0.0.8);}
+        .dark #topNavigation li a:hover, #topNavigation li.current a{
+        background: -moz-linear-gradient(center bottom,rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.25) 130%) repeat scroll 0 0 transparent;
+        background: -webkit-gradient(linear,left top, left bottom,color-stop(0, rgba(255,255,255,0.25)),color-stop(1, rgba(255,255,255,0.05)));
+        border: solid 1px rgba(255,255,255,0);}
+
+        /* Light Theme */
+        #themetype.light #siteName{text-shadow: 1px 1px 1px rgba(0,0,0,@shadowOpacity);}
+        #themetype.light #topNavigation li a{text-shadow:0px 1px 1px rgba(0,0,0,@shadowOpacity);}
+        #themetype.light #top:before{border-color: rgba(0,0,0,@shadowOpacity);}
+        #themetype.light #comments h3, #themetype.light #tagcloud h3, #themetype.light #respond h3,
+        #themetype.light #sidebar h3, #themetype.light #tagcloud .alt h3{text-shadow: 0px 1px 1px rgba(0,0,0,@shadowOpacity);}
+        #themetype.light #respond .form-submit input, #themetype.light fieldset input[type=submit]{
+        text-shadow:1px 1px 2px rgba(0,0,0,@shadowOpacity);
+        box-shadow: -1px 1px 8px rgba(0,0,0,@shadowOpacity);
+        -moz-box-shadow: -1px 1px 8px rgba(0,0,0,@shadowOpacity);
+        -webkit-box-shadow: -1px 1px 8px rgba(0,0,0,@shadowOpacity);
+        }
+    </Content>
+  </CSS>
+  <Dependencies>
+    <Dependency type="Text" label="Enter a name for this site">
+      <Properties>
+        <Output>Dead simple shop</Output>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyPageProperty">
+          <PropertyAlias>siteName</PropertyAlias>
+          <ClientSideContainerID>siteHome</ClientSideContainerID>
+          <Value>${Output}</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+    <Dependency type="Text" label="Enter a description for your site">
+      <Properties>
+        <Output>Just a demo of using the new v6 APIs</Output>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyPageProperty">
+          <PropertyAlias>siteDescription</PropertyAlias>
+          <ClientSideContainerID>siteDescription</ClientSideContainerID>
+          <Value>${Output}</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+    <Dependency type="Option" label="Theme Type">
+      <Properties>
+        <Options>Light;light|Dark (experimental);dark</Options>
+        <Output>
+        </Output>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyTemplate">
+          <TargetFile>umbMaster.master</TargetFile>
+          <TargetID>themetype</TargetID>
+          <TargetAttribute>class</TargetAttribute>
+          <Value>${Output}</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+    <Dependency type="Color" label="Header Text Colour" variable="headerText">
+      <Properties>
+        <Output>
+        </Output>
+      </Properties>
+    </Dependency>
+    <Dependency type="Color" label="Header Gradient 1" variable="gradientOne">
+      <Properties>
+        <Output>
+        </Output>
+      </Properties>
+    </Dependency>
+    <Dependency type="Color" label="Header Gradient 2" variable="gradientTwo">
+      <Properties>
+        <Output>
+        </Output>
+      </Properties>
+    </Dependency>
+    <Dependency type="Option" label="Background Texture" variable="bgImage">
+      <Properties>
+        <Options>None;none|Droplets;/css/feijoa/droplets.png|Scratched;/css/feijoa/scratched.png|Scratched2;/css/feijoa/scratch2.png|Painted1;/css/feijoa/fruity.png|Painted2;/css/feijoa/painterly.png|Graffiti;/css/feijoa/grafiti.png|Wood;/css/feijoa/wood.png</Options>
+        <Output>
+        </Output>
+      </Properties>
+    </Dependency>
+    <Dependency type="Slider" label="Shadow Opacity" variable="shadowOpacity">
+      <Properties>
+        <Minimum>0</Minimum>
+        <Maximum>100</Maximum>
+        <Initial>0.5</Initial>
+        <Ratio>20</Ratio>
+        <Output>
+        </Output>
+      </Properties>
+    </Dependency>
+    <Dependency type="Color" label="Primary (Link) Colour" variable="Primary">
+      <Properties>
+        <Output>
+        </Output>
+      </Properties>
+    </Dependency>
+    <Dependency type="Color" label="Secondary Colour" variable="Secondary">
+      <Properties>
+        <Output>
+        </Output>
+      </Properties>
+    </Dependency>
+    <Dependency type="Option" label="Use a predifined theme (Overrides all)">
+      <Properties>
+        <Options>No;/css/feijoa-colour.css|Yes - Droplet Blue;/css/feijoa-blue.css| Yes - Painted Green;/css/feijoa-green.css| Yes - Woody Brown;/css/feijoa-brown.css| Yes - Dark Candy;/css/feijoa-pink.css</Options>
+        <Output>/css/feijoa-brown.css</Output>
+      </Properties>
+      <Tasks>
+        <Task type="AddStyleSheetToTemplate">
+          <TargetFile>umbMaster.master</TargetFile>
+          <Value>${Output}</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+    <Dependency type="Text" label="Twitter Name">
+      <Properties>
+        <Output>
+        </Output>
+      </Properties>
+      <Tasks>
+        <Task type="ModifyTemplate">
+          <TargetFile>umbMaster.master</TargetFile>
+          <TargetID>twitter</TargetID>
+          <TargetAttribute>href</TargetAttribute>
+          <Value>http://www.twitter.com/${Output}</Value>
+        </Task>
+      </Tasks>
+    </Dependency>
+  </Dependencies>
+  <History>
+    <Task type="ModifyPageProperty" executed="2013-01-22T10:05:21">
+      <PropertyAlias>siteName</PropertyAlias>
+      <ClientSideContainerID>siteHome</ClientSideContainerID>
+      <Value>${Output}</Value>
+      <OriginalValue>Simple website</OriginalValue>
+      <NewValue>Dead simple shop</NewValue>
+    </Task>
+    <Task type="ModifyPageProperty" executed="2013-01-22T10:05:21">
+      <PropertyAlias>siteDescription</PropertyAlias>
+      <ClientSideContainerID>siteDescription</ClientSideContainerID>
+      <Value>${Output}</Value>
+      <OriginalValue>Off to a great start</OriginalValue>
+      <NewValue>Just a demo of using the new v6 APIs</NewValue>
+    </Task>
+    <Task type="ModifyTemplate" executed="2013-01-22T10:05:21">
+      <TargetFile>umbMaster.master</TargetFile>
+      <TargetID>themetype</TargetID>
+      <TargetAttribute>class</TargetAttribute>
+      <Value>${Output}</Value>
+      <OriginalValue>light</OriginalValue>
+      <NewValue>
+      </NewValue>
+    </Task>
+    <Task type="AddStyleSheetToTemplate" executed="2013-01-22T10:05:21">
+      <TargetFile>umbMaster.master</TargetFile>
+      <TargetSelector>
+      </TargetSelector>
+      <Media>
+      </Media>
+      <Value>${Output}</Value>
+      <OriginalValue>
+      </OriginalValue>
+      <NewValue>/css/feijoa-brown.css</NewValue>
+    </Task>
+    <Task type="ModifyTemplate" executed="2013-01-22T10:05:21">
+      <TargetFile>umbMaster.master</TargetFile>
+      <TargetID>twitter</TargetID>
+      <TargetAttribute>href</TargetAttribute>
+      <Value>http://www.twitter.com/${Output}</Value>
+      <OriginalValue>http://www.twitter.com/wolulcmit</OriginalValue>
+      <NewValue>http://www.twitter.com/</NewValue>
+    </Task>
+  </History>
+</Skin>
